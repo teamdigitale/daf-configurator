@@ -109,7 +109,8 @@
             "description" : "Pet not found"
           }
         },
-        "x-accepts" : "application/json"
+        "x-accepts" : "application/json",
+        "x-contentType" : "application/json"
       },
       "post" : {
         "tags" : [ "vocabulary" ],
