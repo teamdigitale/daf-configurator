@@ -58,9 +58,9 @@
                             <modelPackage>apiModels</modelPackage>
                             <invokerPackage>/app</invokerPackage>
                             <output>.</output>
-                            <!--<configOptions>
-                                <sourceFolder>${project.basedir}/app</sourceFolder>
-                            </configOptions>-->
+                            <configOptions>
+                                <useBeanValidation>false</useBeanValidation>
+                            </configOptions>
                         </configuration>
                     </execution>
                 </executions>

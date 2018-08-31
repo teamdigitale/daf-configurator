@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import javax.validation.constraints.*;
 
 @SuppressWarnings("RedundantThrows")
 public interface VocabularyApiControllerImpInterface {

@@ -26,8 +26,7 @@ public class VocabularyApiControllerImp implements VocabularyApiControllerImpInt
     public Vocabulary getVocById(Long vocId) throws Exception {
         //Do your magic!!!
         //return new Vocabulary();
-        Vocabulary voc = TestJava.test();
-        return voc;
+        return TestJava.test();
     }
 
     @Override

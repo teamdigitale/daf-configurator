@@ -4,11 +4,10 @@ import com.fasterxml.jackson.annotation.*;
 import java.util.Set;
 import javax.validation.*;
 import java.util.Objects;
-import javax.validation.constraints.*;
 /**
  * A vocabulary for standardization
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-08-31T16:45:15.450+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-08-31T17:08:29.898+02:00")
 
 @SuppressWarnings({"UnusedReturnValue", "WeakerAccess"})
 public class Vocabulary   {
@@ -27,8 +26,7 @@ public class Vocabulary   {
    * Get id
    * @return id
   **/
-  @NotNull
-  public Long getId() {
+    public Long getId() {
     return id;
   }
 
@@ -45,8 +43,7 @@ public class Vocabulary   {
    * Get name
    * @return name
   **/
-  @NotNull
-  public String getName() {
+    public String getName() {
     return name;
   }
 

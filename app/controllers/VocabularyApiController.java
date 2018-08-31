@@ -15,24 +15,20 @@ import java.io.File;
 import swagger.SwaggerUtils;
 import com.fasterxml.jackson.core.type.TypeReference;
 
-import javax.validation.constraints.*;
-import play.Configuration;
 
 import swagger.SwaggerUtils.ApiAction;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-08-31T16:45:15.450+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-08-31T17:08:29.898+02:00")
 
 public class VocabularyApiController extends Controller {
 
     private final VocabularyApiControllerImpInterface imp;
     private final ObjectMapper mapper;
-    private final Configuration configuration;
 
     @Inject
-    private VocabularyApiController(Configuration configuration, VocabularyApiControllerImpInterface imp) {
+    private VocabularyApiController(VocabularyApiControllerImpInterface imp) {
         this.imp = imp;
         mapper = new ObjectMapper();
-        this.configuration = configuration;
     }
 
 
@@ -42,9 +38,6 @@ public class VocabularyApiController extends Controller {
         Vocabulary body;
         if (nodebody != null) {
             body = mapper.readValue(nodebody.toString(), Vocabulary.class);
-            if (configuration.getBoolean("useInputBeanValidation")) {
-                SwaggerUtils.validate(body);
-            }
         } else {
             throw new IllegalArgumentException("'body' parameter is required");
         }
@@ -61,9 +54,6 @@ public class VocabularyApiController extends Controller {
     @ApiAction
     public Result getVocById(Long vocId) throws Exception {
         Vocabulary obj = imp.getVocById(vocId);
-        if (configuration.getBoolean("useOutputBeanValidation")) {
-            SwaggerUtils.validate(obj);
-        }
         JsonNode result = mapper.valueToTree(obj);
         return ok(result);
     }
@@ -74,9 +64,6 @@ public class VocabularyApiController extends Controller {
         Vocabulary body;
         if (nodebody != null) {
             body = mapper.readValue(nodebody.toString(), Vocabulary.class);
-            if (configuration.getBoolean("useInputBeanValidation")) {
-                SwaggerUtils.validate(body);
-            }
         } else {
             throw new IllegalArgumentException("'body' parameter is required");
         }
