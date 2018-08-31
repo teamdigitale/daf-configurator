@@ -1,4 +1,0 @@
-[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
-[0m[[0mdebug[0m] [0m	(/Users/ale/Development/teamdigitale/code/daf-backend/daf-vanilla-microservice/conf/logback.xml,/Users/ale/Development/teamdigitale/code/daf-backend/daf-vanilla-microservice/target/scala-2.12/classes/logback.xml)[0m
-[0m[[0mdebug[0m] [0m	(/Users/ale/Development/teamdigitale/code/daf-backend/daf-vanilla-microservice/conf/application.conf,/Users/ale/Development/teamdigitale/code/daf-backend/daf-vanilla-microservice/target/scala-2.12/classes/application.conf)[0m
-[0m[[0mdebug[0m] [0m	(/Users/ale/Development/teamdigitale/code/daf-backend/daf-vanilla-microservice/conf/routes,/Users/ale/Development/teamdigitale/code/daf-backend/daf-vanilla-microservice/target/scala-2.12/classes/routes)[0m

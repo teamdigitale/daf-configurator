@@ -8,9 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.io.FileInputStream;
 import javax.validation.constraints.*;
-import it.gov.daf.helpers.TestJava;
-
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-07-19T14:40:06.122+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-08-31T11:37:42.017+02:00")
 
 public class VocabularyApiControllerImp implements VocabularyApiControllerImpInterface {
     @Override
@@ -26,8 +24,7 @@ public class VocabularyApiControllerImp implements VocabularyApiControllerImpInt
     @Override
     public Vocabulary getVocById(Long vocId) throws Exception {
         //Do your magic!!!
-        Vocabulary voc = TestJava.test();
-        return voc;
+        return new Vocabulary();
     }
 
     @Override
