@@ -4,7 +4,7 @@
 		module="daf-configurator-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20180827154539"
+		publication="20180831155843"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>
@@ -43,6 +43,5 @@
 			<artifact name="global-plugins" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
 		<dependency org="com.typesafe.play" name="sbt-plugin" rev="2.6.3" conf="compile->default(compile)" e:sbtVersion="0.13" e:scalaVersion="2.10"/>
-		<dependency org="com.typesafe.sbt" name="sbt-native-packager" rev="1.2.0-M9" conf="compile->default(compile)" e:sbtVersion="0.13" e:scalaVersion="2.10"/>
 	</dependencies>
 </ivy-module>

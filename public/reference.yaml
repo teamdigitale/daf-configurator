@@ -97,6 +97,7 @@ paths:
         '404':
           description: Pet not found
       x-accepts: application/json
+      x-contentType: application/json
     post:
       tags:
       - vocabulary

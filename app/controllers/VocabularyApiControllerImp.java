@@ -1,6 +1,7 @@
 package controllers;
 
 import apiModels.Vocabulary;
+import it.gov.daf.helpers.TestJava;
 
 import play.mvc.Http;
 import java.util.List;
@@ -24,7 +25,8 @@ public class VocabularyApiControllerImp implements VocabularyApiControllerImpInt
     @Override
     public Vocabulary getVocById(Long vocId) throws Exception {
         //Do your magic!!!
-        return new Vocabulary();
+        //return new Vocabulary();
+        return TestJava.test();
     }
 
     @Override
