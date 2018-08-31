@@ -1,4 +1,5 @@
 .idea
 .swagger-codegen
-target
-logs
+/target
+/logs
+/project
