@@ -1,4 +1,5 @@
 import com.typesafe.sbt.packager.docker.{Cmd, ExecCmd}
+import play.core.PlayVersion.{current => playVersion}
 
 name := """daf-configurator"""
 
@@ -10,15 +11,22 @@ lazy val root = (project in file(".")).enablePlugins(PlayJava, DockerPlugin)
 
 scalaVersion := "2.12.2"
 
+
+val AkkaVersion = "2.5.3"
+
 val playLibraries = Seq(
   "org.pac4j"          %% "play-pac4j"       % "6.0.0",
   "org.pac4j"          % "pac4j-http"       % "3.0.0",
   "org.pac4j"          % "pac4j-jwt"        % "3.0.0" exclude("commons-io", "commons-io"),
-  "org.pac4j"          % "pac4j-ldap"       % "3.0.0"
+  "org.pac4j"          % "pac4j-ldap"       % "3.0.0",
+  "com.lightbend.play" %% "play-socket-io" % "1.0.0-beta-2",
+  "com.typesafe.play" %% "play" % playVersion,
+  "com.typesafe.akka" %% "akka-remote" % AkkaVersion
 )
 
 libraryDependencies += "org.webjars" % "swagger-ui" % "3.1.5"
 libraryDependencies += "javax.validation" % "validation-api" % "1.1.0.Final"
+libraryDependencies += "com.softwaremill.macwire" %% "macros" % "2.3.0"
 libraryDependencies += guice
 
 libraryDependencies ++= playLibraries
