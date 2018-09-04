@@ -3,8 +3,8 @@
 # ~~~~
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /                   controllers.Assets.at(path = "/public", file = "index.html")
-GET     /assets/*file       controllers.Assets.at(path = "/public", file)
+#GET     /                   controllers.Assets.at(path = "/public", file = "index.html")
+#GET     /assets/*file       controllers.Assets.at(path = "/public", file)
 
 GET     /api                        controllers.ApiDocController.api
 
@@ -18,8 +18,8 @@ POST     /v2/vocabulary/:vocId                     controllers.VocabularyApiCont
 
 
 
-#GET /assets/*file           controllers.Assets.at(file)
-#GET /versionedAssets/*file  controllers.Assets.versioned(file)
+GET /assets/*file           controllers.Assets.at(file)
+GET /versionedAssets/*file  controllers.Assets.versioned(file)
 
 
 
