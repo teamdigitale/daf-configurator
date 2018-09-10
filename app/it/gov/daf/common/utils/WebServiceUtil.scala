@@ -1,15 +1,9 @@
-package it.gov.daf.common.utils.utils
+package it.gov.daf.common.utils
 
 import java.net.URLEncoder
+
 import play.api.libs.json._
 
-
-@SuppressWarnings(
-  Array(
-    "org.wartremover.warts.Any",
-    "org.wartremover.warts.ToString"
-  )
-)
 object  WebServiceUtil {
 
   def buildEncodedQueryString(params: Map[String, Any]): String = {

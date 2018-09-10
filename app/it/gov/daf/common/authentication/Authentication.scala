@@ -15,12 +15,6 @@ import play.api.mvc.{RequestHeader, Result, Results}
 import scala.collection.convert.decorateAsScala._
 import scala.collection.mutable
 
-@SuppressWarnings(
-  Array(
-    "org.wartremover.warts.Throw",
-    "org.wartremover.warts.Var"
-  )
-)
 object Authentication extends Results {
 
   var configuration: Option[Configuration] = None

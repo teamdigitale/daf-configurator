@@ -9,11 +9,6 @@ import play.api.mvc._
 
 import scala.concurrent.{ExecutionContext, Future}
 
-@SuppressWarnings(
-  Array(
-    "org.wartremover.warts.Overloading"
-  )
-)
 @Singleton
 class SecurityFilter @Inject()(mat: Materializer, configuration: Configuration, playSessionStore: PlaySessionStore, config: Config, ec: ExecutionContext) extends org.pac4j.play.filters.SecurityFilter(mat, configuration, playSessionStore, config, ec) {
 

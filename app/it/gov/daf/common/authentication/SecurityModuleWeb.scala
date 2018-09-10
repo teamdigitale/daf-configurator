@@ -1,7 +1,6 @@
 package it.gov.daf.common.authentication
 
 import com.google.inject.AbstractModule
-//import it.gov.daf.controllers.{DemoHttpActionAdapter, RoleAdminAuthGenerator}
 import java.security.InvalidParameterException
 import java.time.Duration
 
@@ -11,7 +10,6 @@ import org.pac4j.http.credentials.authenticator.test.SimpleTestUsernamePasswordA
 import org.pac4j.jwt.credentials.authenticator.JwtAuthenticator
 import play.api.{Configuration, Environment, Logger}
 
-//import it.gov.daf.controllers.{CustomAuthorizer, DemoHttpActionAdapter, RoleAdminAuthGenerator}
 import org.ldaptive.auth.{Authenticator, BindAuthenticationHandler, SearchDnResolver}
 import org.ldaptive.pool._
 import org.ldaptive.ssl.SslConfig
@@ -23,13 +21,9 @@ import org.pac4j.play.http.DefaultHttpActionAdapter
 import org.pac4j.play.scala.{DefaultSecurityComponents, SecurityComponents}
 import org.pac4j.play.store.{PlayCacheSessionStore, PlaySessionStore}
 
-/**
-  * Guice DI module to be included in application.conf
-  */
 
 class SecurityModuleWeb(environment: Environment, configuration: Configuration) extends AbstractModule {
 
-//  val baseUrl = configuration.getOptional[String]("baseUrl").getOrElse("localhost")
 
   private def getLdapAuthenticator = {
     Logger.logger.info("Daf-Configurator 1.0.0-SNAPSHOT")

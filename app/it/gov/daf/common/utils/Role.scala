@@ -9,11 +9,6 @@ case object Admin extends Role("daf_adm_")
 case object Editor extends Role("daf_edt_")
 case object Viewer extends Role("daf_vwr_")
 
-@SuppressWarnings(
-  Array(
-    "org.wartremover.warts.NonUnitStatements"
-  )
-)
 object Role{
 
   val rolesPrefixs:Seq[String] = Seq(SysAdmin.toString, Admin.toString, Editor.toString, Viewer.toString)
