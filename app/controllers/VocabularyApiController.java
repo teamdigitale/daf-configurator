@@ -18,7 +18,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 
 import swagger.SwaggerUtils.ApiAction;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-08-31T17:08:29.898+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-09-10T08:05:52.048+02:00")
 
 public class VocabularyApiController extends Controller {
 
