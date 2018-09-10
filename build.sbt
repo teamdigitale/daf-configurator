@@ -26,7 +26,9 @@ val playLibraries = Seq(
 
 libraryDependencies += "org.webjars" % "swagger-ui" % "3.1.5"
 libraryDependencies += "javax.validation" % "validation-api" % "1.1.0.Final"
-libraryDependencies += "com.softwaremill.macwire" %% "macros" % "2.3.0"
+//libraryDependencies += "com.softwaremill.macwire" %% "macros" % "2.3.0"
+libraryDependencies += "com.typesafe.akka" %% "akka-stream-kafka" % "0.22"
+
 libraryDependencies += guice
 
 libraryDependencies ++= playLibraries

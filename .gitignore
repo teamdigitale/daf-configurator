@@ -1,5 +1,6 @@
 .idea/
 .swagger-codegen
+.history
 target
 /logs
 /project/project
