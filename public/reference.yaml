@@ -21,6 +21,15 @@ tags:
     url: http://swagger.io
 schemes:
 - http
+#securityDefinitions:
+#  bearerAuth:
+#    type: token
+#    name: Baarer
+#    in: header
+#  basicAuth:
+#    type: token
+#    name: Basic
+#    in: header
 paths:
   "/vocabularies":
     post:
@@ -73,6 +82,9 @@ paths:
       x-accepts: application/json
   "/vocabulary/{vocId}":
     get:
+#      security:
+#      - bearerAuth: []
+#      - basicAuth: []
       tags:
       - Vocabulary
       summary: Find Vocabulary by ID
@@ -87,6 +99,11 @@ paths:
         required: true
         type: integer
         format: int64
+#      - name: authorization
+#        in: header
+#        description: token to be passed as a header
+#        required: true
+#        type: string
       responses:
         '200':
           description: successful operation
@@ -94,8 +111,16 @@ paths:
             "$ref": "#/definitions/Vocabulary"
         '400':
           description: Invalid ID supplied
+#          schema:
+#            $ref: "#/definitions/Error"
         '404':
-          description: Pet not found
+          description: Vocabulary not found
+#          schema:
+#            $ref: "#/definitions/Error"
+#        default:
+#          description: Unexpected error
+#          schema:
+#            $ref: '#/definitions/Error'
       x-accepts: application/json
       x-contentType: application/json
     post:
@@ -162,6 +187,17 @@ definitions:
     example:
       name: ale
       id: 0
+  Error:
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string
+      fields:
+        type: string
 externalDocs:
   description: Find out more about Swagger
   url: http://swagger.io
+

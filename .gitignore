@@ -1,6 +1,7 @@
-.idea
+/.idea/
 .swagger-codegen
 target
-/logs
+/logs/application.log
 /project/project
 /project/target
+/localConfigs/*

@@ -1,5 +1,6 @@
 package controllers;
 
+import apiModels.Error;
 import apiModels.Vocabulary;
 
 import play.mvc.Http;
