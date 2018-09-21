@@ -74,6 +74,7 @@ libraryDependencies ++= Seq(
   //  "org.pac4j" % "pac4j-kerberos" % pac4jVersion,
   //  "org.pac4j" % "pac4j-couch" % pac4jVersion,
   "com.typesafe.play" % "play-cache_2.12" % playVersion,
+  "org.apache.httpcomponents" % "httpclient" % "4.1.1",
   "commons-io" % "commons-io" % "2.5"
 )
 

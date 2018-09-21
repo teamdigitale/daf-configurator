@@ -6,7 +6,9 @@ import it.gov.daf.common.authentication.Authentication
 import it.gov.daf.common.utils._
 import org.apache.commons.codec.binary.Base64
 import play.api.Logger
-import play.api.mvc.{Request, RequestHeader}
+import play.api.libs.typedmap.TypedMap
+import play.api.mvc.request.{RemoteConnection, RequestTarget}
+import play.api.mvc.{Headers, Request, RequestHeader}
 
 import scala.util.Try
 

@@ -1,6 +1,5 @@
 package controllers;
 
-import apiModels.Error;
 import apiModels.Vocabulary;
 
 import play.mvc.Controller;
@@ -19,7 +18,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 
 import swagger.SwaggerUtils.ApiAction;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-09-10T12:22:52.345+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-09-14T16:37:46.459+02:00")
 
 public class VocabularyApiController extends Controller {
 
@@ -54,7 +53,14 @@ public class VocabularyApiController extends Controller {
 
     @ApiAction
     public Result getVocById(Long vocId) throws Exception {
-        Vocabulary obj = imp.getVocById(vocId);
+        String valueauthorization = request().getHeader("authorization");
+        String authorization;
+        if (valueauthorization != null) {
+            authorization = valueauthorization;
+        } else {
+            throw new IllegalArgumentException("'authorization' parameter is required");
+        }
+        Vocabulary obj = imp.getVocById(vocId, authorization);
         JsonNode result = mapper.valueToTree(obj);
         return ok(result);
     }

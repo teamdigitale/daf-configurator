@@ -1,5 +1,6 @@
 package it.gov.daf.common.authentication
 
+import java.util
 import java.util.Date
 
 import com.nimbusds.jwt.JWTClaimsSet
@@ -43,6 +44,19 @@ object Authentication extends Results {
     jwtAuthenticator.addSignatureConfiguration(new SecretSignatureConfiguration(secret.getOrElse(throw new Exception("missing secret"))))
     token.map(jwtAuthenticator.validateTokenAndGetClaims(_).asScala)
   }
+
+  def getClaimsFromToken2(token: String)= {
+    val jwtAuthenticator = new JwtAuthenticator()
+    jwtAuthenticator.addSignatureConfiguration(new SecretSignatureConfiguration(secret.getOrElse(throw new Exception("missing secret"))))
+    println("****************************************************")
+    println(jwtAuthenticator.getProfileDefinition)
+    println("****************************************************")
+    println(token)
+    println(jwtAuthenticator.validateToken(token.split("Bearer").last))
+    println("****************************************************")
+    jwtAuthenticator.validateTokenAndGetClaims(token)
+  }
+
 
 
   def getProfiles(request: RequestHeader): List[CommonProfile] = {
