@@ -14,7 +14,7 @@ public interface VocabularyApiControllerImpInterface {
 
     void deleteVoc(Long vocId) throws Exception;
 
-    Vocabulary getVocById(Long vocId) throws Exception;
+    Vocabulary getVocById(Long vocId, String authorization) throws Exception;
 
     void updateVoc(Vocabulary body) throws Exception;
 

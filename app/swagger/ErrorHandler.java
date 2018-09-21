@@ -1,11 +1,19 @@
 package swagger;
 
 
+import apiModels.Error;
+import apiModels.Vocabulary;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
+import javassist.tools.web.BadHttpRequest;
+import net.minidev.json.JSONObject;
 import play.*;
 import play.api.OptionalSourceMapper;
 import play.api.UsefulException;
 import play.api.routing.Router;
 import play.http.DefaultHttpErrorHandler;
+import play.libs.Json;
 import play.mvc.Http.*;
 import play.mvc.*;
 
@@ -17,6 +25,8 @@ import static play.mvc.Results.*;
 @Singleton
 public class ErrorHandler extends DefaultHttpErrorHandler {
 
+    private final ObjectMapper mapper = new ObjectMapper();
+
     @Inject
     public ErrorHandler(Configuration configuration, Environment environment, OptionalSourceMapper sourceMapper, Provider<Router> routes) {
         super(configuration, environment, sourceMapper, routes);
@@ -24,15 +34,20 @@ public class ErrorHandler extends DefaultHttpErrorHandler {
 
     @Override
     protected CompletionStage<Result> onDevServerError(RequestHeader request, UsefulException exception) {
+//        System.out.println("description = " + exception.description);
+//        System.out.println("title = " + exception.title);
+//        System.out.println("cause = " + exception.cause);
+//        System.out.println("name exception = " + extractTypeException(exception.description));
+//        System.out.println("****************************");
         return CompletableFuture.completedFuture(
-            handleExceptions(exception)
+            handleExceptions(exception, extractTypeException(exception.description))
         );
     }
 
     @Override
     protected CompletionStage<Result> onProdServerError(RequestHeader request, UsefulException exception) {
         return CompletableFuture.completedFuture(
-            handleExceptions(exception)
+            handleExceptions(exception, extractTypeException(exception.description))
         );
     }
 
@@ -42,8 +57,36 @@ public class ErrorHandler extends DefaultHttpErrorHandler {
         //But if you want to have the error printed in the console, just delete this override
     }
 
-    private Result handleExceptions(Throwable t) {
+    private Result handleExceptions(Throwable t, String nameException) {
         //TODO: Handle exception that need special response (return a special apimodel, notFound(), etc..)
-        return ok();
+//        String json = stringToJson(t.getCause().getMessage());
+//        String msg = t.getCause().getMessage();
+//        System.out.println("nameException = " + nameException);
+//        System.out.println(nameException.equals("IllegalArgumentExeption"));
+        Error error = new Error();
+        error.setMessage(t.getCause().getMessage());
+        switch (nameException){
+            case "IllegalArgumentException": return badRequest(parseErrorToJson(error));
+            case "UnauthorizedException": return unauthorized(parseErrorToJson(error));
+            case "NotFoundException": return notFound(parseErrorToJson(error));
+            default: return internalServerError(parseErrorToJson(error));
+        }
+    }
+
+
+    private String extractTypeException(String str) {
+        return str.substring(1, str.indexOf(":"));
+    }
+
+    private String stringToJson(String str){
+        return "{ \"message\": \"" + str + "\"}";
+    }
+
+    private JsonNode parseErrorToJson(Error error) {
+        try{
+            return Json.parse(mapper.writeValueAsString(error));
+        }catch (Exception e){
+            return Json.parse("error in parse object");
+        }
     }
 }

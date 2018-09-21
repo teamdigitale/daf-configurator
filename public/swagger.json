@@ -1,9 +1,9 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "description" : "This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.",
+    "description" : "This is a sample server Daf-Configuration server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.",
     "version" : "1.0.0",
-    "title" : "Swagger Petstore",
+    "title" : "Swagger Daf Configuration",
     "termsOfService" : "http://swagger.io/terms/",
     "contact" : {
       "email" : "apiteam@swagger.io"
@@ -35,7 +35,7 @@
         "parameters" : [ {
           "in" : "body",
           "name" : "body",
-          "description" : "Pet object that needs to be added to the store",
+          "description" : "Vocabulary object that needs to be added to the store",
           "required" : true,
           "schema" : {
             "$ref" : "#/definitions/Vocabulary"
@@ -59,7 +59,7 @@
         "parameters" : [ {
           "in" : "body",
           "name" : "body",
-          "description" : "Pet object that needs to be added to the store",
+          "description" : "Vocabulary object that needs to be added to the store",
           "required" : true,
           "schema" : {
             "$ref" : "#/definitions/Vocabulary"
@@ -90,10 +90,16 @@
         "parameters" : [ {
           "name" : "vocId",
           "in" : "path",
-          "description" : "ID of pet to return",
+          "description" : "ID of vocabulary to return",
           "required" : true,
           "type" : "integer",
           "format" : "int64"
+        }, {
+          "name" : "authorization",
+          "in" : "header",
+          "description" : "token",
+          "required" : true,
+          "type" : "string"
         } ],
         "responses" : {
           "200" : {
@@ -106,7 +112,7 @@
             "description" : "Invalid ID supplied"
           },
           "404" : {
-            "description" : "Pet not found"
+            "description" : "Vocabulary not found"
           }
         },
         "x-accepts" : "application/json",
@@ -122,14 +128,14 @@
         "parameters" : [ {
           "name" : "vocId",
           "in" : "path",
-          "description" : "ID of pet that needs to be updated",
+          "description" : "ID of vocabulary that needs to be updated",
           "required" : true,
           "type" : "integer",
           "format" : "int64"
         }, {
           "name" : "name",
           "in" : "formData",
-          "description" : "Updated name of the pet",
+          "description" : "Updated vocabulary",
           "required" : false,
           "type" : "string"
         } ],
@@ -157,7 +163,7 @@
         } ],
         "responses" : {
           "400" : {
-            "description" : "Invalid pet value"
+            "description" : "Invalid vocabulary id"
           }
         },
         "x-accepts" : "application/json"
@@ -183,6 +189,21 @@
       "example" : {
         "name" : "ale",
         "id" : 0
+      }
+    },
+    "Error" : {
+      "type" : "object",
+      "properties" : {
+        "code" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "fields" : {
+          "type" : "string"
+        }
       }
     }
   },
