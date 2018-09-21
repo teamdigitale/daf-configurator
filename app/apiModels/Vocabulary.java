@@ -7,7 +7,7 @@ import java.util.Objects;
 /**
  * A vocabulary for standardization
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-08-31T17:08:29.898+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-09-10T12:22:52.345+02:00")
 
 @SuppressWarnings({"UnusedReturnValue", "WeakerAccess"})
 public class Vocabulary   {
