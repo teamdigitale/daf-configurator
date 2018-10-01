@@ -22,7 +22,7 @@ import org.pac4j.play.scala.{DefaultSecurityComponents, SecurityComponents}
 import org.pac4j.play.store.{PlayCacheSessionStore, PlaySessionStore}
 
 
-class SecurityModuleWeb(environment: Environment, configuration: Configuration) extends AbstractModule {
+class SecurityModule(environment: Environment, configuration: Configuration) extends AbstractModule {
 
 
   private def getLdapAuthenticator = {
