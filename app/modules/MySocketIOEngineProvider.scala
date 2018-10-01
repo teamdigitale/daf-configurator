@@ -7,7 +7,7 @@ import play.socketio.scaladsl.SocketIO
 import it.gov.daf.realtime.{ChatEngine, ChatEngineMulti}
 
 @Singleton
-class MySocketIOEngineProvider @Inject() (chatEngine: ChatEngineMulti)
+class MySocketIOEngineProvider @Inject() (chatEngine: ChatEngine)
   extends Provider[EngineIOController] {
 
   override lazy val get = chatEngine.controller

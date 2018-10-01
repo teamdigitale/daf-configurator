@@ -1,4 +1,1951 @@
-2018-09-10 08:10:26,923 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-8 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2018-09-28 17:17:47,783 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-7 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
 
-2018-09-10 08:10:26,929 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-8 - Application started (Dev)
+2018-09-28 17:17:47,795 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-7 - Application started (Dev)
+2018-09-28 17:33:07,819 [WARN] from akka.kafka.internal.KafkaConsumerActor in application-akka.actor.default-dispatcher-56 - KafkaConsumer poll has exceeded wake up timeout (3 seconds). Waking up consumer to avoid thread starvation.
+2018-09-28 17:33:10,913 [WARN] from akka.kafka.internal.KafkaConsumerActor in application-akka.actor.default-dispatcher-56 - KafkaConsumer poll has exceeded wake up timeout (3 seconds). Waking up consumer to avoid thread starvation.
+2018-09-28 17:33:14,005 [WARN] from akka.kafka.internal.KafkaConsumerActor in application-akka.actor.default-dispatcher-59 - KafkaConsumer poll has exceeded wake up timeout (3 seconds). Waking up consumer to avoid thread starvation.
+2018-09-28 17:33:17,095 [WARN] from akka.kafka.internal.KafkaConsumerActor in application-akka.actor.default-dispatcher-59 - KafkaConsumer poll has exceeded wake up timeout (3 seconds). Waking up consumer to avoid thread starvation.
+2018-09-28 18:05:56,078 [WARN] from akka.kafka.internal.KafkaConsumerActor in application-akka.actor.default-dispatcher-56 - KafkaConsumer poll has exceeded wake up timeout (3 seconds). Waking up consumer to avoid thread starvation.
+2018-09-28 18:05:59,168 [WARN] from akka.kafka.internal.KafkaConsumerActor in application-akka.actor.default-dispatcher-56 - KafkaConsumer poll has exceeded wake up timeout (3 seconds). Waking up consumer to avoid thread starvation.
+2018-09-28 18:05:59,169 [WARN] from akka.kafka.internal.KafkaConsumerActor in application-akka.actor.default-dispatcher-56 - Consumer poll(50) interrupted with WakeupException (#6 of max-wakeups = 10, wakeup-timeout = 3 seconds).
+2018-09-28 18:06:02,263 [WARN] from akka.kafka.internal.KafkaConsumerActor in application-akka.actor.default-dispatcher-59 - KafkaConsumer poll has exceeded wake up timeout (3 seconds). Waking up consumer to avoid thread starvation.
+2018-09-28 18:06:02,279 [WARN] from akka.kafka.internal.KafkaConsumerActor in application-akka.actor.default-dispatcher-59 - Wake up has been triggered 6 times (See setting akka.kafka.consumer.wakeup-debug). Dumping stacks: Thread[play-dev-mode-scheduler-1,5,main]
+ java.lang.Thread.sleep(Native Method)
+akka.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:85)
+akka.actor.LightArrayRevolverScheduler$$anon$4.nextTick(LightArrayRevolverScheduler.scala:265)
+akka.actor.LightArrayRevolverScheduler$$anon$4.run(LightArrayRevolverScheduler.scala:235)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.actor.default-dispatcher-59,5,main]
+ java.lang.Long.toString(Long.java:397)
+java.lang.Long.toString(Long.java:124)
+java.util.Formatter$FormatSpecifier.print(Formatter.java:3096)
+java.util.Formatter$FormatSpecifier.printInteger(Formatter.java:2789)
+java.util.Formatter$FormatSpecifier.print(Formatter.java:2747)
+java.util.Formatter.format(Formatter.java:2520)
+java.util.Formatter.format(Formatter.java:2455)
+java.lang.String.format(String.java:2940)
+scala.collection.immutable.StringLike.format(StringLike.scala:351)
+scala.collection.immutable.StringLike.format$(StringLike.scala:350)
+scala.collection.immutable.StringOps.format(StringOps.scala:29)
+akka.util.Helpers$.currentTimeMillisToUTCString(Helpers.scala:65)
+akka.event.slf4j.Slf4jLogger.formatTimestamp(Slf4jLogger.scala:125)
+akka.event.slf4j.Slf4jLogger.withMdc(Slf4jLogger.scala:97)
+akka.event.slf4j.Slf4jLogger$$anonfun$receive$1.applyOrElse(Slf4jLogger.scala:75)
+akka.actor.Actor.aroundReceive(Actor.scala:517)
+akka.actor.Actor.aroundReceive$(Actor.scala:515)
+akka.event.slf4j.Slf4jLogger.aroundReceive(Slf4jLogger.scala:54)
+akka.actor.ActorCell.receiveMessage(ActorCell.scala:588)
+akka.actor.ActorCell.invoke(ActorCell.scala:557)
+akka.dispatch.Mailbox.processMailbox(Mailbox.scala:258)
+akka.dispatch.Mailbox.run(Mailbox.scala:225)
+akka.dispatch.Mailbox.exec(Mailbox.scala:235)
+akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[consumer-sample-scheduler-1,5,main]
+ java.lang.Thread.sleep(Native Method)
+akka.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:85)
+akka.actor.LightArrayRevolverScheduler$$anon$4.nextTick(LightArrayRevolverScheduler.scala:265)
+akka.actor.LightArrayRevolverScheduler$$anon$4.run(LightArrayRevolverScheduler.scala:235)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-11,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-7,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-19,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.actor.default-dispatcher-58,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.kafka.default-dispatcher-18,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-6,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[main,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+java.util.concurrent.ExecutorCompletionService.take(ExecutorCompletionService.java:193)
+sbt.ConcurrentRestrictions$$anon$4.take(ConcurrentRestrictions.scala:188)
+sbt.Execute.next$1(Execute.scala:85)
+sbt.Execute.processAll(Execute.scala:88)
+sbt.Execute.runKeep(Execute.scala:68)
+sbt.EvaluateTask$.liftedTree1$1(EvaluateTask.scala:359)
+sbt.EvaluateTask$.run$1(EvaluateTask.scala:358)
+sbt.EvaluateTask$.runTask(EvaluateTask.scala:378)
+sbt.Aggregation$$anonfun$3.apply(Aggregation.scala:69)
+sbt.Aggregation$$anonfun$3.apply(Aggregation.scala:67)
+sbt.EvaluateTask$.withStreams(EvaluateTask.scala:314)
+sbt.Aggregation$.timedRun(Aggregation.scala:67)
+sbt.Aggregation$.runTasks(Aggregation.scala:76)
+sbt.Aggregation$$anonfun$applyDynamicTasks$1.apply(Aggregation.scala:117)
+sbt.Aggregation$$anonfun$applyDynamicTasks$1.apply(Aggregation.scala:115)
+sbt.Command$$anonfun$applyEffect$2$$anonfun$apply$3.apply(Command.scala:61)
+sbt.Command$$anonfun$applyEffect$2$$anonfun$apply$3.apply(Command.scala:61)
+sbt.Act$$anonfun$sbt$Act$$actParser0$1$$anonfun$sbt$Act$$anonfun$$evaluate$1$1$$anonfun$apply$10.apply(Act.scala:253)
+sbt.Act$$anonfun$sbt$Act$$actParser0$1$$anonfun$sbt$Act$$anonfun$$evaluate$1$1$$anonfun$apply$10.apply(Act.scala:250)
+sbt.Command$.process(Command.scala:93)
+sbt.MainLoop$$anonfun$1$$anonfun$apply$1.apply(MainLoop.scala:96)
+sbt.MainLoop$$anonfun$1$$anonfun$apply$1.apply(MainLoop.scala:96)
+sbt.State$$anon$1.doX$1(State.scala:183)
+sbt.State$$anon$1.process(State.scala:190)
+sbt.MainLoop$$anonfun$1.apply(MainLoop.scala:96)
+sbt.MainLoop$$anonfun$1.apply(MainLoop.scala:96)
+sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
+sbt.MainLoop$.next(MainLoop.scala:96)
+sbt.MainLoop$.run(MainLoop.scala:89)
+sbt.MainLoop$$anonfun$runWithNewLog$1.apply(MainLoop.scala:68)
+sbt.MainLoop$$anonfun$runWithNewLog$1.apply(MainLoop.scala:63)
+sbt.Using.apply(Using.scala:24)
+sbt.MainLoop$.runWithNewLog(MainLoop.scala:63)
+sbt.MainLoop$.runAndClearLast(MainLoop.scala:46)
+sbt.MainLoop$.runLoggedLoop(MainLoop.scala:30)
+sbt.MainLoop$.runLogged(MainLoop.scala:22)
+sbt.StandardMain$.runManaged(Main.scala:109)
+sbt.xMain.run(Main.scala:38)
+xsbt.boot.Launch$$anonfun$run$1.apply(Launch.scala:109)
+xsbt.boot.Launch$.withContextLoader(Launch.scala:128)
+xsbt.boot.Launch$.run(Launch.scala:109)
+xsbt.boot.Launch$$anonfun$apply$1.apply(Launch.scala:35)
+xsbt.boot.Launch$.launch(Launch.scala:117)
+xsbt.boot.Launch$.apply(Launch.scala:18)
+xsbt.boot.Boot$.runImpl(Boot.scala:41)
+xsbt.boot.Boot$.main(Boot.scala:17)
+xsbt.boot.Boot.main(Boot.scala)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-8,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.idleAwaitWork(ForkJoinPool.java:2135)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2067)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.kafka.default-dispatcher-23,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[Finalizer,8,system]
+ java.lang.Object.wait(Native Method)
+java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+
+Thread[application-akka.kafka.default-dispatcher-16,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-22,5,main]
+ sun.nio.ch.KQueueArrayWrapper.kevent0(Native Method)
+sun.nio.ch.KQueueArrayWrapper.poll(KQueueArrayWrapper.java:198)
+sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:117)
+sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+org.apache.kafka.common.network.Selector.select(Selector.java:672)
+org.apache.kafka.common.network.Selector.poll(Selector.java:396)
+org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:460)
+org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:238)
+org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:214)
+org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:190)
+org.apache.kafka.clients.consumer.internals.AbstractCoordinator.ensureCoordinatorReady(AbstractCoordinator.java:219)
+org.apache.kafka.clients.consumer.internals.AbstractCoordinator.ensureCoordinatorReady(AbstractCoordinator.java:205)
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.poll(ConsumerCoordinator.java:284)
+org.apache.kafka.clients.consumer.KafkaConsumer.pollOnce(KafkaConsumer.java:1146)
+org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1111)
+akka.kafka.internal.KafkaConsumerActor.tryPoll$1(KafkaConsumerActor.scala:348)
+akka.kafka.internal.KafkaConsumerActor.poll(KafkaConsumerActor.scala:423)
+akka.kafka.internal.KafkaConsumerActor.akka$kafka$internal$KafkaConsumerActor$$receivePoll(KafkaConsumerActor.scala:311)
+akka.kafka.internal.KafkaConsumerActor$$anonfun$receive$1.applyOrElse(KafkaConsumerActor.scala:191)
+akka.actor.Actor.aroundReceive(Actor.scala:517)
+akka.actor.Actor.aroundReceive$(Actor.scala:515)
+akka.kafka.internal.KafkaConsumerActor.aroundReceive(KafkaConsumerActor.scala:120)
+akka.actor.ActorCell.receiveMessage(ActorCell.scala:588)
+akka.actor.ActorCell.invoke(ActorCell.scala:557)
+akka.dispatch.Mailbox.processMailbox(Mailbox.scala:258)
+akka.dispatch.Mailbox.run(Mailbox.scala:225)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-17,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[kafka-coordinator-heartbeat-thread | test-group1,5,main]
+ java.lang.Object.wait(Native Method)
+org.apache.kafka.clients.consumer.internals.AbstractCoordinator$HeartbeatThread.run(AbstractCoordinator.java:947)
+
+Thread[AsyncAppender-Worker-ASYNCFILE,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+ch.qos.logback.core.AsyncAppenderBase$Worker.run(AsyncAppenderBase.java:289)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-2,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.kafka.default-dispatcher-13,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-5,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-11,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.kafka.default-dispatcher-6,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[pool-6-thread-2,5,main]
+ java.io.FileInputStream.read0(Native Method)
+java.io.FileInputStream.read(FileInputStream.java:207)
+jline.internal.NonBlockingInputStream.read(NonBlockingInputStream.java:245)
+jline.internal.InputStreamReader.read(InputStreamReader.java:257)
+jline.internal.InputStreamReader.read(InputStreamReader.java:194)
+jline.console.ConsoleReader.readCharacter(ConsoleReader.java:2146)
+jline.console.ConsoleReader.readCharacter(ConsoleReader.java:2136)
+play.sbt.PlayConsoleInteractionMode$$anonfun$waitForKey$1.play$sbt$PlayConsoleInteractionMode$$anonfun$$waitEOF$1(PlayInteractionMode.scala:62)
+play.sbt.PlayConsoleInteractionMode$$anonfun$waitForKey$1$$anonfun$apply$1.apply$mcV$sp(PlayInteractionMode.scala:73)
+play.sbt.PlayConsoleInteractionMode$$anonfun$doWithoutEcho$1.apply(PlayInteractionMode.scala:80)
+play.sbt.PlayConsoleInteractionMode$$anonfun$doWithoutEcho$1.apply(PlayInteractionMode.scala:77)
+play.sbt.PlayConsoleInteractionMode$.withConsoleReader(PlayInteractionMode.scala:57)
+play.sbt.PlayConsoleInteractionMode$.doWithoutEcho(PlayInteractionMode.scala:77)
+play.sbt.PlayConsoleInteractionMode$$anonfun$waitForKey$1.apply(PlayInteractionMode.scala:73)
+play.sbt.PlayConsoleInteractionMode$$anonfun$waitForKey$1.apply(PlayInteractionMode.scala:60)
+play.sbt.PlayConsoleInteractionMode$.withConsoleReader(PlayInteractionMode.scala:57)
+play.sbt.PlayConsoleInteractionMode$.waitForKey(PlayInteractionMode.scala:60)
+play.sbt.PlayConsoleInteractionMode$.waitForCancel(PlayInteractionMode.scala:83)
+play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3.apply(PlayRun.scala:123)
+play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3.apply(PlayRun.scala:63)
+scala.Function1$$anonfun$compose$1.apply(Function1.scala:47)
+sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40)
+sbt.std.Transform$$anon$4.work(System.scala:63)
+sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
+sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
+sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
+sbt.Execute.work(Execute.scala:237)
+sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
+sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
+sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159)
+sbt.CompletionService$$anon$2.call(CompletionService.scala:28)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-15,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[sbt-web-scheduler-1,5,main]
+ java.lang.Thread.sleep(Native Method)
+akka.actor.LightArrayRevolverScheduler.waitNanos(Scheduler.scala:231)
+akka.actor.LightArrayRevolverScheduler$$anon$8.nextTick(Scheduler.scala:411)
+akka.actor.LightArrayRevolverScheduler$$anon$8.run(Scheduler.scala:381)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-3,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[FSEvent thread,5,main]
+ net.contentobjects.jnotify.macosx.JNotify_macosx.nativeNotifyLoop(Native Method)
+net.contentobjects.jnotify.macosx.JNotify_macosx.access$400(Unknown Source)
+net.contentobjects.jnotify.macosx.JNotify_macosx$1.run(Unknown Source)
+
+Thread[play-dev-mode-akka.io.pinned-dispatcher-5,5,main]
+ sun.nio.ch.KQueueArrayWrapper.kevent0(Native Method)
+sun.nio.ch.KQueueArrayWrapper.poll(KQueueArrayWrapper.java:198)
+sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:117)
+sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+akka.io.SelectionHandler$ChannelRegistryImpl$$anon$3.tryRun(SelectionHandler.scala:128)
+akka.io.SelectionHandler$ChannelRegistryImpl$Task.run(SelectionHandler.scala:246)
+akka.io.SelectionHandler$ChannelRegistryImpl$$anon$3.run(SelectionHandler.scala:161)
+akka.util.SerializedSuspendableExecutionContext.run$1(SerializedSuspendableExecutionContext.scala:68)
+akka.util.SerializedSuspendableExecutionContext.run(SerializedSuspendableExecutionContext.scala:72)
+akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-20,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-scheduler-1,5,main]
+ java.lang.Thread.sleep(Native Method)
+akka.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:85)
+akka.actor.LightArrayRevolverScheduler$$anon$4.nextTick(LightArrayRevolverScheduler.scala:265)
+akka.actor.LightArrayRevolverScheduler$$anon$4.run(LightArrayRevolverScheduler.scala:235)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[consumer-sample-akka.actor.default-dispatcher-3,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.actor.default-dispatcher-56,5,main]
+ java.lang.Thread.dumpThreads(Native Method)
+java.lang.Thread.getAllStackTraces(Thread.java:1610)
+akka.kafka.internal.KafkaConsumerActor.$anonfun$poll$1(KafkaConsumerActor.scala:329)
+akka.kafka.internal.KafkaConsumerActor$$Lambda$908/702320614.apply$mcV$sp(Unknown Source)
+akka.actor.Scheduler$$anon$4.run(Scheduler.scala:205)
+akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40)
+akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:44)
+akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.kafka.default-dispatcher-14,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[com.google.common.base.internal.Finalizer,5,main]
+ java.lang.Object.wait(Native Method)
+java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+com.google.common.base.internal.Finalizer.run(Finalizer.java:124)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-7,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-9,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[AsyncAppender-Worker-ASYNCSTDOUT,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+ch.qos.logback.core.AsyncAppenderBase$Worker.run(AsyncAppenderBase.java:289)
+
+Thread[sbt-web-akka.actor.default-dispatcher-4,5,main]
+ sun.misc.Unsafe.park(Native Method)
+scala.concurrent.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[reloader-timer,5,main]
+ java.lang.Object.wait(Native Method)
+java.lang.Object.wait(Object.java:502)
+java.util.TimerThread.mainLoop(Timer.java:526)
+java.util.TimerThread.run(Timer.java:505)
+
+Thread[Reference Handler,10,system]
+ java.lang.Object.wait(Native Method)
+java.lang.Object.wait(Object.java:502)
+java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+Thread[application-akka.kafka.default-dispatcher-21,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-4,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.actor.default-dispatcher-55,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.kafka.default-dispatcher-12,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-10,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[Signal Dispatcher,9,system]
+ 
+2018-09-28 18:06:02,279 [WARN] from akka.kafka.internal.KafkaConsumerActor in application-akka.actor.default-dispatcher-59 - Consumer poll(50) interrupted with WakeupException (#7 of max-wakeups = 10, wakeup-timeout = 3 seconds).
+2018-09-28 18:06:05,372 [WARN] from akka.kafka.internal.KafkaConsumerActor in application-akka.actor.default-dispatcher-56 - KafkaConsumer poll has exceeded wake up timeout (3 seconds). Waking up consumer to avoid thread starvation.
+2018-09-28 18:06:05,379 [WARN] from akka.kafka.internal.KafkaConsumerActor in application-akka.actor.default-dispatcher-56 - Wake up has been triggered 7 times (See setting akka.kafka.consumer.wakeup-debug). Dumping stacks: Thread[play-dev-mode-scheduler-1,5,main]
+ java.lang.Thread.sleep(Native Method)
+akka.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:85)
+akka.actor.LightArrayRevolverScheduler$$anon$4.nextTick(LightArrayRevolverScheduler.scala:265)
+akka.actor.LightArrayRevolverScheduler$$anon$4.run(LightArrayRevolverScheduler.scala:235)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.actor.default-dispatcher-59,5,main]
+ java.lang.Thread.dumpThreads(Native Method)
+java.lang.Thread.getAllStackTraces(Thread.java:1610)
+akka.kafka.internal.KafkaConsumerActor.$anonfun$poll$1(KafkaConsumerActor.scala:329)
+akka.kafka.internal.KafkaConsumerActor$$Lambda$908/702320614.apply$mcV$sp(Unknown Source)
+akka.actor.Scheduler$$anon$4.run(Scheduler.scala:205)
+akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40)
+akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:44)
+akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[consumer-sample-scheduler-1,5,main]
+ java.lang.Thread.sleep(Native Method)
+akka.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:85)
+akka.actor.LightArrayRevolverScheduler$$anon$4.nextTick(LightArrayRevolverScheduler.scala:265)
+akka.actor.LightArrayRevolverScheduler$$anon$4.run(LightArrayRevolverScheduler.scala:235)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-11,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-7,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-19,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.actor.default-dispatcher-58,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.kafka.default-dispatcher-18,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-6,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.idleAwaitWork(ForkJoinPool.java:2135)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2067)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[main,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+java.util.concurrent.ExecutorCompletionService.take(ExecutorCompletionService.java:193)
+sbt.ConcurrentRestrictions$$anon$4.take(ConcurrentRestrictions.scala:188)
+sbt.Execute.next$1(Execute.scala:85)
+sbt.Execute.processAll(Execute.scala:88)
+sbt.Execute.runKeep(Execute.scala:68)
+sbt.EvaluateTask$.liftedTree1$1(EvaluateTask.scala:359)
+sbt.EvaluateTask$.run$1(EvaluateTask.scala:358)
+sbt.EvaluateTask$.runTask(EvaluateTask.scala:378)
+sbt.Aggregation$$anonfun$3.apply(Aggregation.scala:69)
+sbt.Aggregation$$anonfun$3.apply(Aggregation.scala:67)
+sbt.EvaluateTask$.withStreams(EvaluateTask.scala:314)
+sbt.Aggregation$.timedRun(Aggregation.scala:67)
+sbt.Aggregation$.runTasks(Aggregation.scala:76)
+sbt.Aggregation$$anonfun$applyDynamicTasks$1.apply(Aggregation.scala:117)
+sbt.Aggregation$$anonfun$applyDynamicTasks$1.apply(Aggregation.scala:115)
+sbt.Command$$anonfun$applyEffect$2$$anonfun$apply$3.apply(Command.scala:61)
+sbt.Command$$anonfun$applyEffect$2$$anonfun$apply$3.apply(Command.scala:61)
+sbt.Act$$anonfun$sbt$Act$$actParser0$1$$anonfun$sbt$Act$$anonfun$$evaluate$1$1$$anonfun$apply$10.apply(Act.scala:253)
+sbt.Act$$anonfun$sbt$Act$$actParser0$1$$anonfun$sbt$Act$$anonfun$$evaluate$1$1$$anonfun$apply$10.apply(Act.scala:250)
+sbt.Command$.process(Command.scala:93)
+sbt.MainLoop$$anonfun$1$$anonfun$apply$1.apply(MainLoop.scala:96)
+sbt.MainLoop$$anonfun$1$$anonfun$apply$1.apply(MainLoop.scala:96)
+sbt.State$$anon$1.doX$1(State.scala:183)
+sbt.State$$anon$1.process(State.scala:190)
+sbt.MainLoop$$anonfun$1.apply(MainLoop.scala:96)
+sbt.MainLoop$$anonfun$1.apply(MainLoop.scala:96)
+sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
+sbt.MainLoop$.next(MainLoop.scala:96)
+sbt.MainLoop$.run(MainLoop.scala:89)
+sbt.MainLoop$$anonfun$runWithNewLog$1.apply(MainLoop.scala:68)
+sbt.MainLoop$$anonfun$runWithNewLog$1.apply(MainLoop.scala:63)
+sbt.Using.apply(Using.scala:24)
+sbt.MainLoop$.runWithNewLog(MainLoop.scala:63)
+sbt.MainLoop$.runAndClearLast(MainLoop.scala:46)
+sbt.MainLoop$.runLoggedLoop(MainLoop.scala:30)
+sbt.MainLoop$.runLogged(MainLoop.scala:22)
+sbt.StandardMain$.runManaged(Main.scala:109)
+sbt.xMain.run(Main.scala:38)
+xsbt.boot.Launch$$anonfun$run$1.apply(Launch.scala:109)
+xsbt.boot.Launch$.withContextLoader(Launch.scala:128)
+xsbt.boot.Launch$.run(Launch.scala:109)
+xsbt.boot.Launch$$anonfun$apply$1.apply(Launch.scala:35)
+xsbt.boot.Launch$.launch(Launch.scala:117)
+xsbt.boot.Launch$.apply(Launch.scala:18)
+xsbt.boot.Boot$.runImpl(Boot.scala:41)
+xsbt.boot.Boot$.main(Boot.scala:17)
+xsbt.boot.Boot.main(Boot.scala)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-8,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.kafka.default-dispatcher-23,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[Finalizer,8,system]
+ java.lang.Object.wait(Native Method)
+java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+
+Thread[application-akka.kafka.default-dispatcher-16,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-22,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-17,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[kafka-coordinator-heartbeat-thread | test-group1,5,main]
+ java.lang.Object.wait(Native Method)
+org.apache.kafka.clients.consumer.internals.AbstractCoordinator$HeartbeatThread.run(AbstractCoordinator.java:947)
+
+Thread[AsyncAppender-Worker-ASYNCFILE,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+ch.qos.logback.core.AsyncAppenderBase$Worker.run(AsyncAppenderBase.java:289)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-2,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.kafka.default-dispatcher-13,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-5,5,main]
+ sun.nio.ch.KQueueArrayWrapper.kevent0(Native Method)
+sun.nio.ch.KQueueArrayWrapper.poll(KQueueArrayWrapper.java:198)
+sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:117)
+sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+org.apache.kafka.common.network.Selector.select(Selector.java:672)
+org.apache.kafka.common.network.Selector.poll(Selector.java:396)
+org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:460)
+org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:238)
+org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:214)
+org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:190)
+org.apache.kafka.clients.consumer.internals.AbstractCoordinator.ensureCoordinatorReady(AbstractCoordinator.java:219)
+org.apache.kafka.clients.consumer.internals.AbstractCoordinator.ensureCoordinatorReady(AbstractCoordinator.java:205)
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.poll(ConsumerCoordinator.java:284)
+org.apache.kafka.clients.consumer.KafkaConsumer.pollOnce(KafkaConsumer.java:1146)
+org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1111)
+akka.kafka.internal.KafkaConsumerActor.tryPoll$1(KafkaConsumerActor.scala:348)
+akka.kafka.internal.KafkaConsumerActor.poll(KafkaConsumerActor.scala:423)
+akka.kafka.internal.KafkaConsumerActor.akka$kafka$internal$KafkaConsumerActor$$receivePoll(KafkaConsumerActor.scala:311)
+akka.kafka.internal.KafkaConsumerActor$$anonfun$receive$1.applyOrElse(KafkaConsumerActor.scala:191)
+akka.actor.Actor.aroundReceive(Actor.scala:517)
+akka.actor.Actor.aroundReceive$(Actor.scala:515)
+akka.kafka.internal.KafkaConsumerActor.aroundReceive(KafkaConsumerActor.scala:120)
+akka.actor.ActorCell.receiveMessage(ActorCell.scala:588)
+akka.actor.ActorCell.invoke(ActorCell.scala:557)
+akka.dispatch.Mailbox.processMailbox(Mailbox.scala:258)
+akka.dispatch.Mailbox.run(Mailbox.scala:225)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-11,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.kafka.default-dispatcher-6,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[pool-6-thread-2,5,main]
+ java.io.FileInputStream.read0(Native Method)
+java.io.FileInputStream.read(FileInputStream.java:207)
+jline.internal.NonBlockingInputStream.read(NonBlockingInputStream.java:245)
+jline.internal.InputStreamReader.read(InputStreamReader.java:257)
+jline.internal.InputStreamReader.read(InputStreamReader.java:194)
+jline.console.ConsoleReader.readCharacter(ConsoleReader.java:2146)
+jline.console.ConsoleReader.readCharacter(ConsoleReader.java:2136)
+play.sbt.PlayConsoleInteractionMode$$anonfun$waitForKey$1.play$sbt$PlayConsoleInteractionMode$$anonfun$$waitEOF$1(PlayInteractionMode.scala:62)
+play.sbt.PlayConsoleInteractionMode$$anonfun$waitForKey$1$$anonfun$apply$1.apply$mcV$sp(PlayInteractionMode.scala:73)
+play.sbt.PlayConsoleInteractionMode$$anonfun$doWithoutEcho$1.apply(PlayInteractionMode.scala:80)
+play.sbt.PlayConsoleInteractionMode$$anonfun$doWithoutEcho$1.apply(PlayInteractionMode.scala:77)
+play.sbt.PlayConsoleInteractionMode$.withConsoleReader(PlayInteractionMode.scala:57)
+play.sbt.PlayConsoleInteractionMode$.doWithoutEcho(PlayInteractionMode.scala:77)
+play.sbt.PlayConsoleInteractionMode$$anonfun$waitForKey$1.apply(PlayInteractionMode.scala:73)
+play.sbt.PlayConsoleInteractionMode$$anonfun$waitForKey$1.apply(PlayInteractionMode.scala:60)
+play.sbt.PlayConsoleInteractionMode$.withConsoleReader(PlayInteractionMode.scala:57)
+play.sbt.PlayConsoleInteractionMode$.waitForKey(PlayInteractionMode.scala:60)
+play.sbt.PlayConsoleInteractionMode$.waitForCancel(PlayInteractionMode.scala:83)
+play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3.apply(PlayRun.scala:123)
+play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3.apply(PlayRun.scala:63)
+scala.Function1$$anonfun$compose$1.apply(Function1.scala:47)
+sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40)
+sbt.std.Transform$$anon$4.work(System.scala:63)
+sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
+sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
+sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
+sbt.Execute.work(Execute.scala:237)
+sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
+sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
+sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159)
+sbt.CompletionService$$anon$2.call(CompletionService.scala:28)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-15,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[sbt-web-scheduler-1,5,main]
+ java.lang.Thread.sleep(Native Method)
+akka.actor.LightArrayRevolverScheduler.waitNanos(Scheduler.scala:231)
+akka.actor.LightArrayRevolverScheduler$$anon$8.nextTick(Scheduler.scala:411)
+akka.actor.LightArrayRevolverScheduler$$anon$8.run(Scheduler.scala:381)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-3,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[FSEvent thread,5,main]
+ net.contentobjects.jnotify.macosx.JNotify_macosx.nativeNotifyLoop(Native Method)
+net.contentobjects.jnotify.macosx.JNotify_macosx.access$400(Unknown Source)
+net.contentobjects.jnotify.macosx.JNotify_macosx$1.run(Unknown Source)
+
+Thread[play-dev-mode-akka.io.pinned-dispatcher-5,5,main]
+ sun.nio.ch.KQueueArrayWrapper.kevent0(Native Method)
+sun.nio.ch.KQueueArrayWrapper.poll(KQueueArrayWrapper.java:198)
+sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:117)
+sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+akka.io.SelectionHandler$ChannelRegistryImpl$$anon$3.tryRun(SelectionHandler.scala:128)
+akka.io.SelectionHandler$ChannelRegistryImpl$Task.run(SelectionHandler.scala:246)
+akka.io.SelectionHandler$ChannelRegistryImpl$$anon$3.run(SelectionHandler.scala:161)
+akka.util.SerializedSuspendableExecutionContext.run$1(SerializedSuspendableExecutionContext.scala:68)
+akka.util.SerializedSuspendableExecutionContext.run(SerializedSuspendableExecutionContext.scala:72)
+akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-20,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-scheduler-1,5,main]
+ java.lang.Thread.sleep(Native Method)
+akka.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:85)
+akka.actor.LightArrayRevolverScheduler$$anon$4.nextTick(LightArrayRevolverScheduler.scala:265)
+akka.actor.LightArrayRevolverScheduler$$anon$4.run(LightArrayRevolverScheduler.scala:235)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[consumer-sample-akka.actor.default-dispatcher-3,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.actor.default-dispatcher-56,5,main]
+ akka.util.Helpers$.currentTimeMillisToUTCString(Helpers.scala:61)
+akka.event.slf4j.Slf4jLogger.formatTimestamp(Slf4jLogger.scala:125)
+akka.event.slf4j.Slf4jLogger.withMdc(Slf4jLogger.scala:97)
+akka.event.slf4j.Slf4jLogger$$anonfun$receive$1.applyOrElse(Slf4jLogger.scala:75)
+akka.actor.Actor.aroundReceive(Actor.scala:517)
+akka.actor.Actor.aroundReceive$(Actor.scala:515)
+akka.event.slf4j.Slf4jLogger.aroundReceive(Slf4jLogger.scala:54)
+akka.actor.ActorCell.receiveMessage(ActorCell.scala:588)
+akka.actor.ActorCell.invoke(ActorCell.scala:557)
+akka.dispatch.Mailbox.processMailbox(Mailbox.scala:258)
+akka.dispatch.Mailbox.run(Mailbox.scala:225)
+akka.dispatch.Mailbox.exec(Mailbox.scala:235)
+akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.kafka.default-dispatcher-14,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[com.google.common.base.internal.Finalizer,5,main]
+ java.lang.Object.wait(Native Method)
+java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+com.google.common.base.internal.Finalizer.run(Finalizer.java:124)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-7,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-9,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[AsyncAppender-Worker-ASYNCSTDOUT,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+ch.qos.logback.core.AsyncAppenderBase$Worker.run(AsyncAppenderBase.java:289)
+
+Thread[sbt-web-akka.actor.default-dispatcher-4,5,main]
+ sun.misc.Unsafe.park(Native Method)
+scala.concurrent.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[reloader-timer,5,main]
+ java.lang.Object.wait(Native Method)
+java.lang.Object.wait(Object.java:502)
+java.util.TimerThread.mainLoop(Timer.java:526)
+java.util.TimerThread.run(Timer.java:505)
+
+Thread[Reference Handler,10,system]
+ java.lang.Object.wait(Native Method)
+java.lang.Object.wait(Object.java:502)
+java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+Thread[application-akka.kafka.default-dispatcher-21,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-4,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.actor.default-dispatcher-55,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.kafka.default-dispatcher-12,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-10,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[Signal Dispatcher,9,system]
+ 
+2018-09-28 18:06:05,380 [WARN] from akka.kafka.internal.KafkaConsumerActor in application-akka.actor.default-dispatcher-56 - Consumer poll(50) interrupted with WakeupException (#8 of max-wakeups = 10, wakeup-timeout = 3 seconds).
+2018-09-28 18:06:08,473 [WARN] from akka.kafka.internal.KafkaConsumerActor in application-akka.actor.default-dispatcher-59 - KafkaConsumer poll has exceeded wake up timeout (3 seconds). Waking up consumer to avoid thread starvation.
+2018-09-28 18:06:08,479 [WARN] from akka.kafka.internal.KafkaConsumerActor in application-akka.actor.default-dispatcher-59 - Wake up has been triggered 8 times (See setting akka.kafka.consumer.wakeup-debug). Dumping stacks: Thread[play-dev-mode-scheduler-1,5,main]
+ java.lang.Thread.sleep(Native Method)
+akka.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:85)
+akka.actor.LightArrayRevolverScheduler$$anon$4.nextTick(LightArrayRevolverScheduler.scala:265)
+akka.actor.LightArrayRevolverScheduler$$anon$4.run(LightArrayRevolverScheduler.scala:235)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.actor.default-dispatcher-59,5,main]
+ ch.qos.logback.classic.util.LogbackMDCAdapter.put(LogbackMDCAdapter.java:110)
+org.slf4j.MDC.put(MDC.java:147)
+akka.event.slf4j.Slf4jLogger.withMdc(Slf4jLogger.scala:95)
+akka.event.slf4j.Slf4jLogger$$anonfun$receive$1.applyOrElse(Slf4jLogger.scala:75)
+akka.actor.Actor.aroundReceive(Actor.scala:517)
+akka.actor.Actor.aroundReceive$(Actor.scala:515)
+akka.event.slf4j.Slf4jLogger.aroundReceive(Slf4jLogger.scala:54)
+akka.actor.ActorCell.receiveMessage(ActorCell.scala:588)
+akka.actor.ActorCell.invoke(ActorCell.scala:557)
+akka.dispatch.Mailbox.processMailbox(Mailbox.scala:258)
+akka.dispatch.Mailbox.run(Mailbox.scala:225)
+akka.dispatch.Mailbox.exec(Mailbox.scala:235)
+akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[consumer-sample-scheduler-1,5,main]
+ java.lang.Thread.sleep(Native Method)
+akka.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:85)
+akka.actor.LightArrayRevolverScheduler$$anon$4.nextTick(LightArrayRevolverScheduler.scala:265)
+akka.actor.LightArrayRevolverScheduler$$anon$4.run(LightArrayRevolverScheduler.scala:235)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-11,5,main]
+ sun.nio.ch.KQueueArrayWrapper.kevent0(Native Method)
+sun.nio.ch.KQueueArrayWrapper.poll(KQueueArrayWrapper.java:198)
+sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:117)
+sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+org.apache.kafka.common.network.Selector.select(Selector.java:672)
+org.apache.kafka.common.network.Selector.poll(Selector.java:396)
+org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:460)
+org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:238)
+org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:214)
+org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:190)
+org.apache.kafka.clients.consumer.internals.AbstractCoordinator.ensureCoordinatorReady(AbstractCoordinator.java:219)
+org.apache.kafka.clients.consumer.internals.AbstractCoordinator.ensureCoordinatorReady(AbstractCoordinator.java:205)
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.poll(ConsumerCoordinator.java:284)
+org.apache.kafka.clients.consumer.KafkaConsumer.pollOnce(KafkaConsumer.java:1146)
+org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1111)
+akka.kafka.internal.KafkaConsumerActor.tryPoll$1(KafkaConsumerActor.scala:348)
+akka.kafka.internal.KafkaConsumerActor.poll(KafkaConsumerActor.scala:423)
+akka.kafka.internal.KafkaConsumerActor.akka$kafka$internal$KafkaConsumerActor$$receivePoll(KafkaConsumerActor.scala:311)
+akka.kafka.internal.KafkaConsumerActor$$anonfun$receive$1.applyOrElse(KafkaConsumerActor.scala:191)
+akka.actor.Actor.aroundReceive(Actor.scala:517)
+akka.actor.Actor.aroundReceive$(Actor.scala:515)
+akka.kafka.internal.KafkaConsumerActor.aroundReceive(KafkaConsumerActor.scala:120)
+akka.actor.ActorCell.receiveMessage(ActorCell.scala:588)
+akka.actor.ActorCell.invoke(ActorCell.scala:557)
+akka.dispatch.Mailbox.processMailbox(Mailbox.scala:258)
+akka.dispatch.Mailbox.run(Mailbox.scala:225)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-7,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-19,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.actor.default-dispatcher-58,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.kafka.default-dispatcher-18,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-6,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.idleAwaitWork(ForkJoinPool.java:2135)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2067)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[main,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+java.util.concurrent.ExecutorCompletionService.take(ExecutorCompletionService.java:193)
+sbt.ConcurrentRestrictions$$anon$4.take(ConcurrentRestrictions.scala:188)
+sbt.Execute.next$1(Execute.scala:85)
+sbt.Execute.processAll(Execute.scala:88)
+sbt.Execute.runKeep(Execute.scala:68)
+sbt.EvaluateTask$.liftedTree1$1(EvaluateTask.scala:359)
+sbt.EvaluateTask$.run$1(EvaluateTask.scala:358)
+sbt.EvaluateTask$.runTask(EvaluateTask.scala:378)
+sbt.Aggregation$$anonfun$3.apply(Aggregation.scala:69)
+sbt.Aggregation$$anonfun$3.apply(Aggregation.scala:67)
+sbt.EvaluateTask$.withStreams(EvaluateTask.scala:314)
+sbt.Aggregation$.timedRun(Aggregation.scala:67)
+sbt.Aggregation$.runTasks(Aggregation.scala:76)
+sbt.Aggregation$$anonfun$applyDynamicTasks$1.apply(Aggregation.scala:117)
+sbt.Aggregation$$anonfun$applyDynamicTasks$1.apply(Aggregation.scala:115)
+sbt.Command$$anonfun$applyEffect$2$$anonfun$apply$3.apply(Command.scala:61)
+sbt.Command$$anonfun$applyEffect$2$$anonfun$apply$3.apply(Command.scala:61)
+sbt.Act$$anonfun$sbt$Act$$actParser0$1$$anonfun$sbt$Act$$anonfun$$evaluate$1$1$$anonfun$apply$10.apply(Act.scala:253)
+sbt.Act$$anonfun$sbt$Act$$actParser0$1$$anonfun$sbt$Act$$anonfun$$evaluate$1$1$$anonfun$apply$10.apply(Act.scala:250)
+sbt.Command$.process(Command.scala:93)
+sbt.MainLoop$$anonfun$1$$anonfun$apply$1.apply(MainLoop.scala:96)
+sbt.MainLoop$$anonfun$1$$anonfun$apply$1.apply(MainLoop.scala:96)
+sbt.State$$anon$1.doX$1(State.scala:183)
+sbt.State$$anon$1.process(State.scala:190)
+sbt.MainLoop$$anonfun$1.apply(MainLoop.scala:96)
+sbt.MainLoop$$anonfun$1.apply(MainLoop.scala:96)
+sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
+sbt.MainLoop$.next(MainLoop.scala:96)
+sbt.MainLoop$.run(MainLoop.scala:89)
+sbt.MainLoop$$anonfun$runWithNewLog$1.apply(MainLoop.scala:68)
+sbt.MainLoop$$anonfun$runWithNewLog$1.apply(MainLoop.scala:63)
+sbt.Using.apply(Using.scala:24)
+sbt.MainLoop$.runWithNewLog(MainLoop.scala:63)
+sbt.MainLoop$.runAndClearLast(MainLoop.scala:46)
+sbt.MainLoop$.runLoggedLoop(MainLoop.scala:30)
+sbt.MainLoop$.runLogged(MainLoop.scala:22)
+sbt.StandardMain$.runManaged(Main.scala:109)
+sbt.xMain.run(Main.scala:38)
+xsbt.boot.Launch$$anonfun$run$1.apply(Launch.scala:109)
+xsbt.boot.Launch$.withContextLoader(Launch.scala:128)
+xsbt.boot.Launch$.run(Launch.scala:109)
+xsbt.boot.Launch$$anonfun$apply$1.apply(Launch.scala:35)
+xsbt.boot.Launch$.launch(Launch.scala:117)
+xsbt.boot.Launch$.apply(Launch.scala:18)
+xsbt.boot.Boot$.runImpl(Boot.scala:41)
+xsbt.boot.Boot$.main(Boot.scala:17)
+xsbt.boot.Boot.main(Boot.scala)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-8,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.kafka.default-dispatcher-23,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[Finalizer,8,system]
+ java.lang.Object.wait(Native Method)
+java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+
+Thread[application-akka.kafka.default-dispatcher-16,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-22,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-17,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[kafka-coordinator-heartbeat-thread | test-group1,5,main]
+ java.lang.Object.wait(Native Method)
+org.apache.kafka.clients.consumer.internals.AbstractCoordinator$HeartbeatThread.run(AbstractCoordinator.java:947)
+
+Thread[AsyncAppender-Worker-ASYNCFILE,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+ch.qos.logback.core.AsyncAppenderBase$Worker.run(AsyncAppenderBase.java:289)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-2,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.kafka.default-dispatcher-13,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-5,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-11,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.kafka.default-dispatcher-6,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[pool-6-thread-2,5,main]
+ java.io.FileInputStream.read0(Native Method)
+java.io.FileInputStream.read(FileInputStream.java:207)
+jline.internal.NonBlockingInputStream.read(NonBlockingInputStream.java:245)
+jline.internal.InputStreamReader.read(InputStreamReader.java:257)
+jline.internal.InputStreamReader.read(InputStreamReader.java:194)
+jline.console.ConsoleReader.readCharacter(ConsoleReader.java:2146)
+jline.console.ConsoleReader.readCharacter(ConsoleReader.java:2136)
+play.sbt.PlayConsoleInteractionMode$$anonfun$waitForKey$1.play$sbt$PlayConsoleInteractionMode$$anonfun$$waitEOF$1(PlayInteractionMode.scala:62)
+play.sbt.PlayConsoleInteractionMode$$anonfun$waitForKey$1$$anonfun$apply$1.apply$mcV$sp(PlayInteractionMode.scala:73)
+play.sbt.PlayConsoleInteractionMode$$anonfun$doWithoutEcho$1.apply(PlayInteractionMode.scala:80)
+play.sbt.PlayConsoleInteractionMode$$anonfun$doWithoutEcho$1.apply(PlayInteractionMode.scala:77)
+play.sbt.PlayConsoleInteractionMode$.withConsoleReader(PlayInteractionMode.scala:57)
+play.sbt.PlayConsoleInteractionMode$.doWithoutEcho(PlayInteractionMode.scala:77)
+play.sbt.PlayConsoleInteractionMode$$anonfun$waitForKey$1.apply(PlayInteractionMode.scala:73)
+play.sbt.PlayConsoleInteractionMode$$anonfun$waitForKey$1.apply(PlayInteractionMode.scala:60)
+play.sbt.PlayConsoleInteractionMode$.withConsoleReader(PlayInteractionMode.scala:57)
+play.sbt.PlayConsoleInteractionMode$.waitForKey(PlayInteractionMode.scala:60)
+play.sbt.PlayConsoleInteractionMode$.waitForCancel(PlayInteractionMode.scala:83)
+play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3.apply(PlayRun.scala:123)
+play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3.apply(PlayRun.scala:63)
+scala.Function1$$anonfun$compose$1.apply(Function1.scala:47)
+sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40)
+sbt.std.Transform$$anon$4.work(System.scala:63)
+sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
+sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
+sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
+sbt.Execute.work(Execute.scala:237)
+sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
+sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
+sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159)
+sbt.CompletionService$$anon$2.call(CompletionService.scala:28)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-15,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[sbt-web-scheduler-1,5,main]
+ java.lang.Thread.sleep(Native Method)
+akka.actor.LightArrayRevolverScheduler.waitNanos(Scheduler.scala:231)
+akka.actor.LightArrayRevolverScheduler$$anon$8.nextTick(Scheduler.scala:411)
+akka.actor.LightArrayRevolverScheduler$$anon$8.run(Scheduler.scala:381)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-3,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[FSEvent thread,5,main]
+ net.contentobjects.jnotify.macosx.JNotify_macosx.nativeNotifyLoop(Native Method)
+net.contentobjects.jnotify.macosx.JNotify_macosx.access$400(Unknown Source)
+net.contentobjects.jnotify.macosx.JNotify_macosx$1.run(Unknown Source)
+
+Thread[play-dev-mode-akka.io.pinned-dispatcher-5,5,main]
+ sun.nio.ch.KQueueArrayWrapper.kevent0(Native Method)
+sun.nio.ch.KQueueArrayWrapper.poll(KQueueArrayWrapper.java:198)
+sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:117)
+sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+akka.io.SelectionHandler$ChannelRegistryImpl$$anon$3.tryRun(SelectionHandler.scala:128)
+akka.io.SelectionHandler$ChannelRegistryImpl$Task.run(SelectionHandler.scala:246)
+akka.io.SelectionHandler$ChannelRegistryImpl$$anon$3.run(SelectionHandler.scala:161)
+akka.util.SerializedSuspendableExecutionContext.run$1(SerializedSuspendableExecutionContext.scala:68)
+akka.util.SerializedSuspendableExecutionContext.run(SerializedSuspendableExecutionContext.scala:72)
+akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-20,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-scheduler-1,5,main]
+ java.lang.Thread.sleep(Native Method)
+akka.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:85)
+akka.actor.LightArrayRevolverScheduler$$anon$4.nextTick(LightArrayRevolverScheduler.scala:265)
+akka.actor.LightArrayRevolverScheduler$$anon$4.run(LightArrayRevolverScheduler.scala:235)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[consumer-sample-akka.actor.default-dispatcher-3,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.actor.default-dispatcher-56,5,main]
+ java.lang.Thread.dumpThreads(Native Method)
+java.lang.Thread.getAllStackTraces(Thread.java:1610)
+akka.kafka.internal.KafkaConsumerActor.$anonfun$poll$1(KafkaConsumerActor.scala:329)
+akka.kafka.internal.KafkaConsumerActor$$Lambda$908/702320614.apply$mcV$sp(Unknown Source)
+akka.actor.Scheduler$$anon$4.run(Scheduler.scala:205)
+akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40)
+akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:44)
+akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.kafka.default-dispatcher-14,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[com.google.common.base.internal.Finalizer,5,main]
+ java.lang.Object.wait(Native Method)
+java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+com.google.common.base.internal.Finalizer.run(Finalizer.java:124)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-7,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-9,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[AsyncAppender-Worker-ASYNCSTDOUT,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+ch.qos.logback.core.AsyncAppenderBase$Worker.run(AsyncAppenderBase.java:289)
+
+Thread[sbt-web-akka.actor.default-dispatcher-4,5,main]
+ sun.misc.Unsafe.park(Native Method)
+scala.concurrent.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[reloader-timer,5,main]
+ java.lang.Object.wait(Native Method)
+java.lang.Object.wait(Object.java:502)
+java.util.TimerThread.mainLoop(Timer.java:526)
+java.util.TimerThread.run(Timer.java:505)
+
+Thread[Reference Handler,10,system]
+ java.lang.Object.wait(Native Method)
+java.lang.Object.wait(Object.java:502)
+java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+Thread[application-akka.kafka.default-dispatcher-21,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-4,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.actor.default-dispatcher-55,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.kafka.default-dispatcher-12,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-10,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[Signal Dispatcher,9,system]
+ 
+2018-09-28 18:06:08,481 [WARN] from akka.kafka.internal.KafkaConsumerActor in application-akka.actor.default-dispatcher-59 - Consumer poll(50) interrupted with WakeupException (#9 of max-wakeups = 10, wakeup-timeout = 3 seconds).
+2018-09-28 18:06:11,569 [WARN] from akka.kafka.internal.KafkaConsumerActor in application-akka.actor.default-dispatcher-56 - KafkaConsumer poll has exceeded wake up timeout (3 seconds). Waking up consumer to avoid thread starvation.
+2018-09-28 18:06:11,577 [WARN] from akka.kafka.internal.KafkaConsumerActor in application-akka.actor.default-dispatcher-59 - Wake up has been triggered 9 times (See setting akka.kafka.consumer.wakeup-debug). Dumping stacks: Thread[play-dev-mode-scheduler-1,5,main]
+ java.lang.Thread.sleep(Native Method)
+akka.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:85)
+akka.actor.LightArrayRevolverScheduler$$anon$4.nextTick(LightArrayRevolverScheduler.scala:265)
+akka.actor.LightArrayRevolverScheduler$$anon$4.run(LightArrayRevolverScheduler.scala:235)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.actor.default-dispatcher-59,5,main]
+ java.lang.Thread.dumpThreads(Native Method)
+java.lang.Thread.getAllStackTraces(Thread.java:1610)
+akka.kafka.internal.KafkaConsumerActor.$anonfun$poll$1(KafkaConsumerActor.scala:329)
+akka.kafka.internal.KafkaConsumerActor$$Lambda$908/702320614.apply$mcV$sp(Unknown Source)
+akka.actor.Scheduler$$anon$4.run(Scheduler.scala:205)
+akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40)
+akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:44)
+akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[consumer-sample-scheduler-1,5,main]
+ java.lang.Thread.sleep(Native Method)
+akka.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:85)
+akka.actor.LightArrayRevolverScheduler$$anon$4.nextTick(LightArrayRevolverScheduler.scala:265)
+akka.actor.LightArrayRevolverScheduler$$anon$4.run(LightArrayRevolverScheduler.scala:235)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-11,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-7,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-19,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.actor.default-dispatcher-58,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.kafka.default-dispatcher-18,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-6,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.idleAwaitWork(ForkJoinPool.java:2135)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2067)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[main,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:442)
+java.util.concurrent.ExecutorCompletionService.take(ExecutorCompletionService.java:193)
+sbt.ConcurrentRestrictions$$anon$4.take(ConcurrentRestrictions.scala:188)
+sbt.Execute.next$1(Execute.scala:85)
+sbt.Execute.processAll(Execute.scala:88)
+sbt.Execute.runKeep(Execute.scala:68)
+sbt.EvaluateTask$.liftedTree1$1(EvaluateTask.scala:359)
+sbt.EvaluateTask$.run$1(EvaluateTask.scala:358)
+sbt.EvaluateTask$.runTask(EvaluateTask.scala:378)
+sbt.Aggregation$$anonfun$3.apply(Aggregation.scala:69)
+sbt.Aggregation$$anonfun$3.apply(Aggregation.scala:67)
+sbt.EvaluateTask$.withStreams(EvaluateTask.scala:314)
+sbt.Aggregation$.timedRun(Aggregation.scala:67)
+sbt.Aggregation$.runTasks(Aggregation.scala:76)
+sbt.Aggregation$$anonfun$applyDynamicTasks$1.apply(Aggregation.scala:117)
+sbt.Aggregation$$anonfun$applyDynamicTasks$1.apply(Aggregation.scala:115)
+sbt.Command$$anonfun$applyEffect$2$$anonfun$apply$3.apply(Command.scala:61)
+sbt.Command$$anonfun$applyEffect$2$$anonfun$apply$3.apply(Command.scala:61)
+sbt.Act$$anonfun$sbt$Act$$actParser0$1$$anonfun$sbt$Act$$anonfun$$evaluate$1$1$$anonfun$apply$10.apply(Act.scala:253)
+sbt.Act$$anonfun$sbt$Act$$actParser0$1$$anonfun$sbt$Act$$anonfun$$evaluate$1$1$$anonfun$apply$10.apply(Act.scala:250)
+sbt.Command$.process(Command.scala:93)
+sbt.MainLoop$$anonfun$1$$anonfun$apply$1.apply(MainLoop.scala:96)
+sbt.MainLoop$$anonfun$1$$anonfun$apply$1.apply(MainLoop.scala:96)
+sbt.State$$anon$1.doX$1(State.scala:183)
+sbt.State$$anon$1.process(State.scala:190)
+sbt.MainLoop$$anonfun$1.apply(MainLoop.scala:96)
+sbt.MainLoop$$anonfun$1.apply(MainLoop.scala:96)
+sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
+sbt.MainLoop$.next(MainLoop.scala:96)
+sbt.MainLoop$.run(MainLoop.scala:89)
+sbt.MainLoop$$anonfun$runWithNewLog$1.apply(MainLoop.scala:68)
+sbt.MainLoop$$anonfun$runWithNewLog$1.apply(MainLoop.scala:63)
+sbt.Using.apply(Using.scala:24)
+sbt.MainLoop$.runWithNewLog(MainLoop.scala:63)
+sbt.MainLoop$.runAndClearLast(MainLoop.scala:46)
+sbt.MainLoop$.runLoggedLoop(MainLoop.scala:30)
+sbt.MainLoop$.runLogged(MainLoop.scala:22)
+sbt.StandardMain$.runManaged(Main.scala:109)
+sbt.xMain.run(Main.scala:38)
+xsbt.boot.Launch$$anonfun$run$1.apply(Launch.scala:109)
+xsbt.boot.Launch$.withContextLoader(Launch.scala:128)
+xsbt.boot.Launch$.run(Launch.scala:109)
+xsbt.boot.Launch$$anonfun$apply$1.apply(Launch.scala:35)
+xsbt.boot.Launch$.launch(Launch.scala:117)
+xsbt.boot.Launch$.apply(Launch.scala:18)
+xsbt.boot.Boot$.runImpl(Boot.scala:41)
+xsbt.boot.Boot$.main(Boot.scala:17)
+xsbt.boot.Boot.main(Boot.scala)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-8,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.kafka.default-dispatcher-23,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[Finalizer,8,system]
+ java.lang.Object.wait(Native Method)
+java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+
+Thread[application-akka.kafka.default-dispatcher-16,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-22,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-17,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[kafka-coordinator-heartbeat-thread | test-group1,5,main]
+ java.lang.Object.wait(Native Method)
+org.apache.kafka.clients.consumer.internals.AbstractCoordinator$HeartbeatThread.run(AbstractCoordinator.java:947)
+
+Thread[AsyncAppender-Worker-ASYNCFILE,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+ch.qos.logback.core.AsyncAppenderBase$Worker.run(AsyncAppenderBase.java:289)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-2,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.kafka.default-dispatcher-13,5,main]
+ sun.nio.ch.KQueueArrayWrapper.kevent0(Native Method)
+sun.nio.ch.KQueueArrayWrapper.poll(KQueueArrayWrapper.java:198)
+sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:117)
+sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+org.apache.kafka.common.network.Selector.select(Selector.java:672)
+org.apache.kafka.common.network.Selector.poll(Selector.java:396)
+org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:460)
+org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:238)
+org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:214)
+org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:190)
+org.apache.kafka.clients.consumer.internals.AbstractCoordinator.ensureCoordinatorReady(AbstractCoordinator.java:219)
+org.apache.kafka.clients.consumer.internals.AbstractCoordinator.ensureCoordinatorReady(AbstractCoordinator.java:205)
+org.apache.kafka.clients.consumer.internals.ConsumerCoordinator.poll(ConsumerCoordinator.java:284)
+org.apache.kafka.clients.consumer.KafkaConsumer.pollOnce(KafkaConsumer.java:1146)
+org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1111)
+akka.kafka.internal.KafkaConsumerActor.tryPoll$1(KafkaConsumerActor.scala:348)
+akka.kafka.internal.KafkaConsumerActor.poll(KafkaConsumerActor.scala:423)
+akka.kafka.internal.KafkaConsumerActor.akka$kafka$internal$KafkaConsumerActor$$receivePoll(KafkaConsumerActor.scala:311)
+akka.kafka.internal.KafkaConsumerActor$$anonfun$receive$1.applyOrElse(KafkaConsumerActor.scala:191)
+akka.actor.Actor.aroundReceive(Actor.scala:517)
+akka.actor.Actor.aroundReceive$(Actor.scala:515)
+akka.kafka.internal.KafkaConsumerActor.aroundReceive(KafkaConsumerActor.scala:120)
+akka.actor.ActorCell.receiveMessage(ActorCell.scala:588)
+akka.actor.ActorCell.invoke(ActorCell.scala:557)
+akka.dispatch.Mailbox.processMailbox(Mailbox.scala:258)
+akka.dispatch.Mailbox.run(Mailbox.scala:225)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-5,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-11,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.kafka.default-dispatcher-6,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[pool-6-thread-2,5,main]
+ java.io.FileInputStream.read0(Native Method)
+java.io.FileInputStream.read(FileInputStream.java:207)
+jline.internal.NonBlockingInputStream.read(NonBlockingInputStream.java:245)
+jline.internal.InputStreamReader.read(InputStreamReader.java:257)
+jline.internal.InputStreamReader.read(InputStreamReader.java:194)
+jline.console.ConsoleReader.readCharacter(ConsoleReader.java:2146)
+jline.console.ConsoleReader.readCharacter(ConsoleReader.java:2136)
+play.sbt.PlayConsoleInteractionMode$$anonfun$waitForKey$1.play$sbt$PlayConsoleInteractionMode$$anonfun$$waitEOF$1(PlayInteractionMode.scala:62)
+play.sbt.PlayConsoleInteractionMode$$anonfun$waitForKey$1$$anonfun$apply$1.apply$mcV$sp(PlayInteractionMode.scala:73)
+play.sbt.PlayConsoleInteractionMode$$anonfun$doWithoutEcho$1.apply(PlayInteractionMode.scala:80)
+play.sbt.PlayConsoleInteractionMode$$anonfun$doWithoutEcho$1.apply(PlayInteractionMode.scala:77)
+play.sbt.PlayConsoleInteractionMode$.withConsoleReader(PlayInteractionMode.scala:57)
+play.sbt.PlayConsoleInteractionMode$.doWithoutEcho(PlayInteractionMode.scala:77)
+play.sbt.PlayConsoleInteractionMode$$anonfun$waitForKey$1.apply(PlayInteractionMode.scala:73)
+play.sbt.PlayConsoleInteractionMode$$anonfun$waitForKey$1.apply(PlayInteractionMode.scala:60)
+play.sbt.PlayConsoleInteractionMode$.withConsoleReader(PlayInteractionMode.scala:57)
+play.sbt.PlayConsoleInteractionMode$.waitForKey(PlayInteractionMode.scala:60)
+play.sbt.PlayConsoleInteractionMode$.waitForCancel(PlayInteractionMode.scala:83)
+play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3.apply(PlayRun.scala:123)
+play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3.apply(PlayRun.scala:63)
+scala.Function1$$anonfun$compose$1.apply(Function1.scala:47)
+sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40)
+sbt.std.Transform$$anon$4.work(System.scala:63)
+sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
+sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:228)
+sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
+sbt.Execute.work(Execute.scala:237)
+sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
+sbt.Execute$$anonfun$submit$1.apply(Execute.scala:228)
+sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159)
+sbt.CompletionService$$anon$2.call(CompletionService.scala:28)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+java.util.concurrent.FutureTask.run(FutureTask.java:266)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-15,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[sbt-web-scheduler-1,5,main]
+ java.lang.Thread.sleep(Native Method)
+akka.actor.LightArrayRevolverScheduler.waitNanos(Scheduler.scala:231)
+akka.actor.LightArrayRevolverScheduler$$anon$8.nextTick(Scheduler.scala:411)
+akka.actor.LightArrayRevolverScheduler$$anon$8.run(Scheduler.scala:381)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-3,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[FSEvent thread,5,main]
+ net.contentobjects.jnotify.macosx.JNotify_macosx.nativeNotifyLoop(Native Method)
+net.contentobjects.jnotify.macosx.JNotify_macosx.access$400(Unknown Source)
+net.contentobjects.jnotify.macosx.JNotify_macosx$1.run(Unknown Source)
+
+Thread[play-dev-mode-akka.io.pinned-dispatcher-5,5,main]
+ sun.nio.ch.KQueueArrayWrapper.kevent0(Native Method)
+sun.nio.ch.KQueueArrayWrapper.poll(KQueueArrayWrapper.java:198)
+sun.nio.ch.KQueueSelectorImpl.doSelect(KQueueSelectorImpl.java:117)
+sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:86)
+sun.nio.ch.SelectorImpl.select(SelectorImpl.java:97)
+akka.io.SelectionHandler$ChannelRegistryImpl$$anon$3.tryRun(SelectionHandler.scala:128)
+akka.io.SelectionHandler$ChannelRegistryImpl$Task.run(SelectionHandler.scala:246)
+akka.io.SelectionHandler$ChannelRegistryImpl$$anon$3.run(SelectionHandler.scala:161)
+akka.util.SerializedSuspendableExecutionContext.run$1(SerializedSuspendableExecutionContext.scala:68)
+akka.util.SerializedSuspendableExecutionContext.run(SerializedSuspendableExecutionContext.scala:72)
+akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-akka.kafka.default-dispatcher-20,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[application-scheduler-1,5,main]
+ java.lang.Thread.sleep(Native Method)
+akka.actor.LightArrayRevolverScheduler.waitNanos(LightArrayRevolverScheduler.scala:85)
+akka.actor.LightArrayRevolverScheduler$$anon$4.nextTick(LightArrayRevolverScheduler.scala:265)
+akka.actor.LightArrayRevolverScheduler$$anon$4.run(LightArrayRevolverScheduler.scala:235)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[consumer-sample-akka.actor.default-dispatcher-3,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.actor.default-dispatcher-56,5,main]
+ scala.collection.immutable.StringLike.format$(StringLike.scala:350)
+scala.collection.immutable.StringOps.format(StringOps.scala:29)
+akka.util.Helpers$.currentTimeMillisToUTCString(Helpers.scala:65)
+akka.event.slf4j.Slf4jLogger.formatTimestamp(Slf4jLogger.scala:125)
+akka.event.slf4j.Slf4jLogger.withMdc(Slf4jLogger.scala:97)
+akka.event.slf4j.Slf4jLogger$$anonfun$receive$1.applyOrElse(Slf4jLogger.scala:75)
+akka.actor.Actor.aroundReceive(Actor.scala:517)
+akka.actor.Actor.aroundReceive$(Actor.scala:515)
+akka.event.slf4j.Slf4jLogger.aroundReceive(Slf4jLogger.scala:54)
+akka.actor.ActorCell.receiveMessage(ActorCell.scala:588)
+akka.actor.ActorCell.invoke(ActorCell.scala:557)
+akka.dispatch.Mailbox.processMailbox(Mailbox.scala:258)
+akka.dispatch.Mailbox.run(Mailbox.scala:225)
+akka.dispatch.Mailbox.exec(Mailbox.scala:235)
+akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.kafka.default-dispatcher-14,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[com.google.common.base.internal.Finalizer,5,main]
+ java.lang.Object.wait(Native Method)
+java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:143)
+java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:164)
+com.google.common.base.internal.Finalizer.run(Finalizer.java:124)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-7,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-9,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[AsyncAppender-Worker-ASYNCSTDOUT,5,main]
+ java.io.FileOutputStream.writeBytes(Native Method)
+java.io.FileOutputStream.write(FileOutputStream.java:326)
+java.io.BufferedOutputStream.write(BufferedOutputStream.java:122)
+java.io.PrintStream.write(PrintStream.java:480)
+java.io.FilterOutputStream.write(FilterOutputStream.java:97)
+ch.qos.logback.core.joran.spi.ConsoleTarget$1.write(ConsoleTarget.java:37)
+ch.qos.logback.core.OutputStreamAppender.writeBytes(OutputStreamAppender.java:199)
+ch.qos.logback.core.OutputStreamAppender.subAppend(OutputStreamAppender.java:231)
+ch.qos.logback.core.OutputStreamAppender.append(OutputStreamAppender.java:102)
+ch.qos.logback.core.UnsynchronizedAppenderBase.doAppend(UnsynchronizedAppenderBase.java:84)
+ch.qos.logback.core.spi.AppenderAttachableImpl.appendLoopOnAppenders(AppenderAttachableImpl.java:51)
+ch.qos.logback.core.AsyncAppenderBase$Worker.run(AsyncAppenderBase.java:290)
+
+Thread[sbt-web-akka.actor.default-dispatcher-4,5,main]
+ sun.misc.Unsafe.park(Native Method)
+scala.concurrent.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[reloader-timer,5,main]
+ java.lang.Object.wait(Native Method)
+java.lang.Object.wait(Object.java:502)
+java.util.TimerThread.mainLoop(Timer.java:526)
+java.util.TimerThread.run(Timer.java:505)
+
+Thread[Reference Handler,10,system]
+ java.lang.Object.wait(Native Method)
+java.lang.Object.wait(Object.java:502)
+java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+Thread[application-akka.kafka.default-dispatcher-21,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-4,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.actor.default-dispatcher-55,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[application-akka.kafka.default-dispatcher-12,5,main]
+ sun.misc.Unsafe.park(Native Method)
+java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:467)
+java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1073)
+java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+java.lang.Thread.run(Thread.java:748)
+
+Thread[play-dev-mode-akka.actor.default-dispatcher-10,5,main]
+ sun.misc.Unsafe.park(Native Method)
+akka.dispatch.forkjoin.ForkJoinPool.scan(ForkJoinPool.java:2075)
+akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+
+Thread[Signal Dispatcher,9,system]
+ 
+2018-09-28 18:06:11,583 [ERROR] from akka.kafka.internal.KafkaConsumerActor in application-akka.actor.default-dispatcher-59 - WakeupException limit exceeded during poll(50), stopping (max-wakeups = 10, wakeup-timeout = 3 seconds).
