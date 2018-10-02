@@ -80,7 +80,7 @@
         "x-accepts" : "application/json"
       }
     },
-    "/vocabulary/{vocId}" : {
+    "/vocabulary/{name}" : {
       "get" : {
         "tags" : [ "Vocabulary" ],
         "summary" : "Find Vocabulary by ID",
@@ -88,16 +88,9 @@
         "operationId" : "getVocById",
         "produces" : [ "application/json" ],
         "parameters" : [ {
-          "name" : "vocId",
+          "name" : "name",
           "in" : "path",
-          "description" : "ID of vocabulary to return",
-          "required" : true,
-          "type" : "integer",
-          "format" : "int64"
-        }, {
-          "name" : "authorization",
-          "in" : "header",
-          "description" : "token",
+          "description" : "name of vocabulary to return",
           "required" : true,
           "type" : "string"
         } ],
@@ -126,14 +119,14 @@
         "consumes" : [ "application/x-www-form-urlencoded" ],
         "produces" : [ "application/json" ],
         "parameters" : [ {
-          "name" : "vocId",
+          "name" : "name",
           "in" : "path",
           "description" : "ID of vocabulary that needs to be updated",
           "required" : true,
-          "type" : "integer",
+          "type" : "string",
           "format" : "int64"
         }, {
-          "name" : "name",
+          "name" : "voc",
           "in" : "formData",
           "description" : "Updated vocabulary",
           "required" : false,
@@ -154,12 +147,11 @@
         "operationId" : "deleteVoc",
         "produces" : [ "application/json" ],
         "parameters" : [ {
-          "name" : "vocId",
+          "name" : "name",
           "in" : "path",
           "description" : "Voc id to delete",
           "required" : true,
-          "type" : "integer",
-          "format" : "int64"
+          "type" : "string"
         } ],
         "responses" : {
           "400" : {
@@ -173,22 +165,14 @@
   "definitions" : {
     "Vocabulary" : {
       "type" : "object",
-      "required" : [ "id", "name" ],
+      "required" : [ "voc" ],
       "properties" : {
-        "id" : {
-          "type" : "integer",
-          "format" : "int64"
-        },
-        "name" : {
-          "type" : "string",
-          "example" : "vocabularies"
+        "voc" : {
+          "type" : "string"
         }
       },
-      "title" : "a Vocabulary",
-      "description" : "A vocabulary for standardization",
       "example" : {
-        "name" : "ale",
-        "id" : 0
+        "voc" : "voc"
       }
     },
     "Error" : {
@@ -202,6 +186,63 @@
           "type" : "string"
         },
         "fields" : {
+          "type" : "string"
+        }
+      }
+    },
+    "VocabularyFromGit" : {
+      "type" : "object",
+      "required" : [ "_links", "content", "download_url", "encoding", "git_url", "html_url", "name", "path", "sha", "size", "type", "url" ],
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "path" : {
+          "type" : "string"
+        },
+        "sha" : {
+          "type" : "string"
+        },
+        "size" : {
+          "type" : "string"
+        },
+        "url" : {
+          "type" : "string"
+        },
+        "html_url" : {
+          "type" : "string"
+        },
+        "git_url" : {
+          "type" : "string"
+        },
+        "download_url" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "content" : {
+          "type" : "string"
+        },
+        "encoding" : {
+          "type" : "string"
+        },
+        "_links" : {
+          "type" : "object",
+          "properties" : { }
+        }
+      }
+    },
+    "VocabularyFromGitLinks" : {
+      "type" : "object",
+      "properties" : {
+        "self" : {
+          "type" : "string"
+        },
+        "git" : {
+          "type" : "string"
+        },
+        "html" : {
           "type" : "string"
         }
       }

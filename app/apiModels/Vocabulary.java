@@ -5,50 +5,30 @@ import java.util.Set;
 import javax.validation.*;
 import java.util.Objects;
 /**
- * A vocabulary for standardization
+ * Vocabulary
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-09-14T16:37:46.459+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-10-02T16:23:40.254+02:00")
 
 @SuppressWarnings({"UnusedReturnValue", "WeakerAccess"})
 public class Vocabulary   {
-  @JsonProperty("id")
-  private Long id = null;
+  @JsonProperty("voc")
+  private String voc = null;
 
-  @JsonProperty("name")
-  private String name = null;
-
-  public Vocabulary id(Long id) {
-    this.id = id;
+  public Vocabulary voc(String voc) {
+    this.voc = voc;
     return this;
   }
 
    /**
-   * Get id
-   * @return id
+   * Get voc
+   * @return voc
   **/
-    public Long getId() {
-    return id;
+    public String getVoc() {
+    return voc;
   }
 
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-  public Vocabulary name(String name) {
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Get name
-   * @return name
-  **/
-    public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
+  public void setVoc(String voc) {
+    this.voc = voc;
   }
 
 
@@ -61,13 +41,12 @@ public class Vocabulary   {
       return false;
     }
     Vocabulary vocabulary = (Vocabulary) o;
-    return Objects.equals(id, vocabulary.id) &&
-        Objects.equals(name, vocabulary.name);
+    return Objects.equals(voc, vocabulary.voc);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name);
+    return Objects.hash(voc);
   }
 
   @SuppressWarnings("StringBufferReplaceableByString")
@@ -76,8 +55,7 @@ public class Vocabulary   {
     StringBuilder sb = new StringBuilder();
     sb.append("class Vocabulary {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    voc: ").append(toIndentedString(voc)).append("\n");
     sb.append("}");
     return sb.toString();
   }
