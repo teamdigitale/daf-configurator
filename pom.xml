@@ -54,6 +54,7 @@
                         <configuration>
                             <inputSpec>${project.basedir}/public/reference.yaml</inputSpec>
                             <language>java-play-framework</language>
+                            <templateDirectory>templates</templateDirectory>
                             <apiPackage>controllers</apiPackage>
                             <modelPackage>apiModels</modelPackage>
                             <invokerPackage>/app</invokerPackage>

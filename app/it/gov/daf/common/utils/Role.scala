@@ -13,9 +13,9 @@ object Role{
 
   val rolesPrefixs:Seq[String] = Seq(SysAdmin.toString, Admin.toString, Editor.toString, Viewer.toString)
 
-  def pickRole( lista:Array[String],group:String ):Option[Role] = {
+  def pickRole( lista:Seq[String],group:String ):Option[Role] = {
 
-    val appo:Array[String] = lista.filter(_.endsWith(group))
+    val appo = lista.filter(_.endsWith(group))
 
     if( appo.contains(Admin.toString+group) )
       Some(Admin)

@@ -22,13 +22,13 @@ import org.pac4j.play.scala.{DefaultSecurityComponents, SecurityComponents}
 import org.pac4j.play.store.{PlayCacheSessionStore, PlaySessionStore}
 
 
-class SecurityModuleWeb(environment: Environment, configuration: Configuration) extends AbstractModule {
+class SecurityModule(environment: Environment, configuration: Configuration) extends AbstractModule {
 
 
   private def getLdapAuthenticator = {
     Logger.logger.info("Daf-Configurator 1.0.0-SNAPSHOT")
     val connectionConfig = new ConnectionConfig
-    connectionConfig.setConnectTimeout(Duration.ofMillis(configuration.getOptional[Long]("pac4j.ldap.connect_timeout").getOrElse(2000)))
+    connectionConfig.setConnectTimeout(Duration.ofMillis(configuration.getOptional[Long]("pac4j.ldap.connect_timeout").getOrElse(10000)))
     connectionConfig.setResponseTimeout(Duration.ofMillis(configuration.getOptional[Long]("pac4j.ldap.response_timeout").getOrElse(10000)))
     connectionConfig.setLdapUrl(
       configuration.getOptional[String]("pac4j.ldap.url").getOrElse(throw new InvalidParameterException(s"Missing mandatory parameter pac4j.ldap.url"))

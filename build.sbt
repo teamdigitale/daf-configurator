@@ -12,47 +12,6 @@ lazy val root = (project in file(".")).enablePlugins(PlayJava, DockerPlugin)
 
 scalaVersion := "2.12.2"
 
-//val playLibraries = Seq(
-//  "org.pac4j"          %% "play-pac4j"       % "6.0.0",
-//  "org.pac4j"          % "pac4j-http"       % "3.0.0",
-//  "org.pac4j"          % "pac4j-jwt"        % "3.0.0" exclude("commons-io", "commons-io"),
-//  "org.pac4j"          % "pac4j-ldap"       % "3.0.0"
-//)
-//
-//libraryDependencies += "org.webjars" % "swagger-ui" % "3.1.5"
-//libraryDependencies += "javax.validation" % "validation-api" % "1.1.0.Final"
-//libraryDependencies += guice
-//libraryDependencies += cache
-//
-//libraryDependencies ++= playLibraries
-
-
-
-//libraryDependencies ++= Seq(
-//  guice,
-//  cacheApi,
-//  ws,
-//  filters,
-//  "org.pac4j"          %% "play-pac4j"       % "6.0.0",
-//  "org.pac4j"          %% "play-pac4j"       % playPac4jVersion,
-//  "org.pac4j"          % "pac4j-http"       % "3.0.0",
-//  "org.pac4j"          % "pac4j-http"       % pac4jVersion,
-//  "org.pac4j"          % "pac4j-jwt"        % "3.0.0" exclude("commons-io", "commons-io"),
-//  "org.pac4j"          % "pac4j-jwt"        % pac4jVersion exclude("commons-io", "commons-io"),
-//  "org.pac4j"          % "pac4j-ldap"       % "3.0.0",
-//  "org.pac4j" % "pac4j-ldap" % pac4jVersion,
-//  "org.webjars" % "swagger-ui" % "3.1.5",
-//  "javax.validation" % "validation-api" % "1.1.0.Final",
-//dal sito
-//  "org.pac4j" % "pac4j-oauth" % pac4jVersion,
-//?
-//  "org.pac4j" % "pac4j-cas" % pac4jVersion,
-//  "org.pac4j" % "pac4j-openid" % pac4jVersion exclude("xml-apis" , "xml-apis"),
-//  "org.pac4j" % "pac4j-saml" % pac4jVersion//,
-
-//  "com.typesafe.play" % "play-cache_2.12" % playVersion
-//)
-
 libraryDependencies ++= Seq(
   guice,
   ehcache, // or cacheApi
@@ -96,8 +55,6 @@ val soptsNoTest = Seq(
   "-Ywarn-dead-code",
   "-Ywarn-value-discard"
 )
-
-//routesGenerator := InjectedRoutesGenerator
 
 scalacOptions in (Compile, doc) ++= sopts ++ soptsNoTest
 scalacOptions in Test ++= sopts

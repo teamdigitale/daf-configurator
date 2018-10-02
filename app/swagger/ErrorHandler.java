@@ -34,11 +34,6 @@ public class ErrorHandler extends DefaultHttpErrorHandler {
 
     @Override
     protected CompletionStage<Result> onDevServerError(RequestHeader request, UsefulException exception) {
-//        System.out.println("description = " + exception.description);
-//        System.out.println("title = " + exception.title);
-//        System.out.println("cause = " + exception.cause);
-//        System.out.println("name exception = " + extractTypeException(exception.description));
-//        System.out.println("****************************");
         return CompletableFuture.completedFuture(
             handleExceptions(exception, extractTypeException(exception.description))
         );
@@ -59,10 +54,6 @@ public class ErrorHandler extends DefaultHttpErrorHandler {
 
     private Result handleExceptions(Throwable t, String nameException) {
         //TODO: Handle exception that need special response (return a special apimodel, notFound(), etc..)
-//        String json = stringToJson(t.getCause().getMessage());
-//        String msg = t.getCause().getMessage();
-//        System.out.println("nameException = " + nameException);
-//        System.out.println(nameException.equals("IllegalArgumentExeption"));
         Error error = new Error();
         error.setMessage(t.getCause().getMessage());
         switch (nameException){

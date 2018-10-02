@@ -71,7 +71,7 @@ paths:
           description: Validation exception
       x-contentType: application/json
       x-accepts: application/json
-  "/vocabulary/{vocId}":
+  "/vocabulary/{name}":
     get:
       tags:
       - Vocabulary
@@ -81,15 +81,9 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: vocId
+      - name: name
         in: path
-        description: ID of vocabulary to return
-        required: true
-        type: integer
-        format: int64
-      - name: authorization
-        in: header
-        description: token
+        description: name of vocabulary to return
         required: true
         type: string
       responses:
@@ -122,13 +116,13 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: vocId
+      - name: name
         in: path
         description: ID of vocabulary that needs to be updated
         required: true
-        type: integer
+        type: string
         format: int64
-      - name: name
+      - name: voc
         in: formData
         description: Updated vocabulary
         required: false
@@ -147,12 +141,11 @@ paths:
       produces:
       - application/json
       parameters:
-      - name: vocId
+      - name: name
         in: path
         description: Voc id to delete
         required: true
-        type: integer
-        format: int64
+        type: string
       responses:
         '400':
           description: Invalid vocabulary id
@@ -161,20 +154,10 @@ definitions:
   Vocabulary:
     type: object
     required:
-    - name
-    - id
+    - voc
     properties:
-      id:
-        type: integer
-        format: int64
-      name:
+      voc:
         type: string
-        example: vocabularies
-    title: a Vocabulary
-    description: A vocabulary for standardization
-    example:
-      name: ale
-      id: 0
   Error:
     type: object
     properties:
@@ -184,6 +167,61 @@ definitions:
       message:
         type: string
       fields:
+        type: string
+  VocabularyFromGit:
+    type: object
+    required:
+    - name
+    - path
+    - sha
+    - size
+    - url
+    - html_url
+    - git_url
+    - download_url
+    - type
+    - content
+    - encoding
+    - _links
+    properties:
+      name:
+        type: string
+      path:
+        type: string
+      sha:
+        type: string
+      size:
+        type: string
+      url:
+        type: string
+      html_url:
+        type: string
+      git_url:
+        type: string
+      download_url:
+        type: string
+      type:
+        type: string
+      content:
+        type: string
+      encoding:
+        type: string
+      _links:
+        type: object
+        schema:
+          $ref: '#/definitions/VocabularyFromGitLinks'
+  VocabularyFromGitLinks:
+    type: object
+    requiered:
+    - self
+    - git
+    - html
+    properties:
+      self:
+        type: string
+      git:
+        type: string
+      html:
         type: string
 externalDocs:
   description: Find out more about Swagger

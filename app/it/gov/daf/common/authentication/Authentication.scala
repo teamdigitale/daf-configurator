@@ -45,20 +45,6 @@ object Authentication extends Results {
     token.map(jwtAuthenticator.validateTokenAndGetClaims(_).asScala)
   }
 
-  def getClaimsFromToken2(token: String)= {
-    val jwtAuthenticator = new JwtAuthenticator()
-    jwtAuthenticator.addSignatureConfiguration(new SecretSignatureConfiguration(secret.getOrElse(throw new Exception("missing secret"))))
-    println("****************************************************")
-    println(jwtAuthenticator.getProfileDefinition)
-    println("****************************************************")
-    println(token)
-    println(jwtAuthenticator.validateToken(token.split("Bearer").last))
-    println("****************************************************")
-    jwtAuthenticator.validateTokenAndGetClaims(token)
-  }
-
-
-
   def getProfiles(request: RequestHeader): List[CommonProfile] = {
     val webContext = new PlayWebContext(request, playSessionStore.getOrElse(throw new Exception("missing playSessionStore")))
     val profileManager = new ProfileManager[CommonProfile](webContext)

@@ -7,10 +7,10 @@ GET     /api                        controllers.ApiDocController.api
 
 #Functions for Vocabulary API
 POST     /v2/vocabularies                     controllers.VocabularyApiController.addVoc()
-DELETE     /v2/vocabulary/:vocId                     controllers.VocabularyApiController.deleteVoc(vocId: Long)
-GET     /v2/vocabulary/:vocId                     controllers.VocabularyApiController.getVocById(vocId: Long)
+DELETE     /v2/vocabulary/:name                     controllers.VocabularyApiController.deleteVoc(name: String)
+GET     /v2/vocabulary/:name                     controllers.VocabularyApiController.getVocById(name: String)
 PUT     /v2/vocabularies                     controllers.VocabularyApiController.updateVoc()
-POST     /v2/vocabulary/:vocId                     controllers.VocabularyApiController.updateVocWithForm(vocId: Long)
+POST     /v2/vocabulary/:name                     controllers.VocabularyApiController.updateVocWithForm(name: String)
 
 # Map static resources from the /public folder to the /assets URL path
 GET /assets/*file           controllers.Assets.at(file)
