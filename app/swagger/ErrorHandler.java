@@ -2,12 +2,8 @@ package swagger;
 
 
 import apiModels.Error;
-import apiModels.Vocabulary;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
-import javassist.tools.web.BadHttpRequest;
-import net.minidev.json.JSONObject;
 import play.*;
 import play.api.OptionalSourceMapper;
 import play.api.UsefulException;
@@ -67,10 +63,6 @@ public class ErrorHandler extends DefaultHttpErrorHandler {
 
     private String extractTypeException(String str) {
         return str.substring(1, str.indexOf(":"));
-    }
-
-    private String stringToJson(String str){
-        return "{ \"message\": \"" + str + "\"}";
     }
 
     private JsonNode parseErrorToJson(Error error) {
