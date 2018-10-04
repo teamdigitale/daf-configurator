@@ -3,8 +3,6 @@ package controllers;
 import akka.actor.ActorSystem;
 import akka.stream.ActorMaterializer;
 import apiModels.Vocabulary;
-import apiModels.VocabularyFromGit;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import it.gov.daf.common.CredentialManager;
 import it.gov.daf.common.utils.UserInfo;
 import it.gov.daf.utils.ConfigReader;
@@ -13,11 +11,8 @@ import it.gov.daf.utils.java.UnauthorizedException;
 import play.api.mvc.RequestHeader;
 
 import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import org.apache.commons.codec.binary.Base64;
-import org.apache.commons.codec.binary.StringUtils;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 
 
 
@@ -28,8 +23,8 @@ public class VocabularyApiControllerImp implements VocabularyApiControllerImpInt
     final ActorSystem system = ActorSystem.create("daf-configurator");
     final ActorMaterializer materializer = ActorMaterializer.create(system);
 
-    final String gitVocUrl = ConfigReader.getGitVocUrl();
-    final String gitVocPath = ConfigReader.getGitVocPath();
+    final String basePath = System.getProperty("user.dir");
+    final String vocPath = ConfigReader.getVocPath();
 
     @Override
     public void addVoc(Vocabulary body, RequestHeader headers) throws Exception {
@@ -45,23 +40,32 @@ public class VocabularyApiControllerImp implements VocabularyApiControllerImpInt
     public Vocabulary getVocById(String name, RequestHeader requestHeader) throws Exception {
         UserInfo userInfo = CredentialManager.readCredentialFromRequest(requestHeader);
         if(CredentialManager.isOrgsAdmin(requestHeader, userInfo.groups()) || CredentialManager.isOrgsEditor(requestHeader, userInfo.groups())) {
-            URL url = new URL(gitVocUrl + gitVocPath + name);
-            HttpURLConnection con = (HttpURLConnection) url.openConnection();
-            con.setRequestMethod("GET");
-            if(con.getResponseCode() == 404) throw new NotFoundException(name + " not found");
-            BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
-            String inputLine;
-            StringBuffer content = new StringBuffer();
-            while ((inputLine = in.readLine()) != null) {
-                content.append(inputLine);
+            BufferedReader br = null;
+            FileReader fr = null;
+            try {
+                fr = new FileReader(basePath + vocPath + name);
+                br = new BufferedReader(fr);
+                String sCurrentLine;
+                StringBuffer fileVoc = new StringBuffer();
+                while ((sCurrentLine = br.readLine()) != null) {
+                    fileVoc.append(sCurrentLine);
+                }
+                Vocabulary voc = new Vocabulary();
+                voc.setVoc(fileVoc.toString());
+                return voc;
+            } catch (FileNotFoundException e) {
+                throw new NotFoundException(e.getMessage());
             }
-            in.close();
-            VocabularyFromGit vocabularyFromGit = new ObjectMapper().readValue(content.toString(), VocabularyFromGit.class);
-            String contentString = StringUtils.newStringUtf8(Base64.decodeBase64(vocabularyFromGit.getContent()));
-            Vocabulary voc = new Vocabulary();
-            voc.setVoc(contentString);
-            con.disconnect();
-            return voc;
+                finally {
+                try {
+                    if (br != null)
+                        br.close();
+                    if (fr != null)
+                        fr.close();
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
         }
         else throw new UnauthorizedException("unauthorized");
     }

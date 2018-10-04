@@ -189,63 +189,6 @@
           "type" : "string"
         }
       }
-    },
-    "VocabularyFromGit" : {
-      "type" : "object",
-      "required" : [ "_links", "content", "download_url", "encoding", "git_url", "html_url", "name", "path", "sha", "size", "type", "url" ],
-      "properties" : {
-        "name" : {
-          "type" : "string"
-        },
-        "path" : {
-          "type" : "string"
-        },
-        "sha" : {
-          "type" : "string"
-        },
-        "size" : {
-          "type" : "string"
-        },
-        "url" : {
-          "type" : "string"
-        },
-        "html_url" : {
-          "type" : "string"
-        },
-        "git_url" : {
-          "type" : "string"
-        },
-        "download_url" : {
-          "type" : "string"
-        },
-        "type" : {
-          "type" : "string"
-        },
-        "content" : {
-          "type" : "string"
-        },
-        "encoding" : {
-          "type" : "string"
-        },
-        "_links" : {
-          "type" : "object",
-          "properties" : { }
-        }
-      }
-    },
-    "VocabularyFromGitLinks" : {
-      "type" : "object",
-      "properties" : {
-        "self" : {
-          "type" : "string"
-        },
-        "git" : {
-          "type" : "string"
-        },
-        "html" : {
-          "type" : "string"
-        }
-      }
     }
   },
   "externalDocs" : {
