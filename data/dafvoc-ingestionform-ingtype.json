@@ -1,0 +1,34 @@
+[
+  {
+    "uid": "sftp",
+    "name": {"default": "SFTP / Drag & Drop"},
+    "desc": {
+      "ita": "Ingestion via SFTP. Path e altre informazioni saranno disponibili alla fine della procedura.",
+      "eng": "SFTP ingestion. Path and other info will be profided at the end of the procedure.",
+      "default": "SFTP ingestion. Path and other info will be provided at the end of the procedure."
+    },
+    "actions": [
+      {
+        "ctx": "ingform",
+        "action": "add-form-elements",
+        "elements": ["dragdrop"]
+      }
+    ]
+  },
+  {
+    "uid": "webservice_pull",
+    "name": {"default": "Webservice pull"},
+    "desc": {
+      "ita": "Ingestion via Webservice. Inserisci le info necessarie e il DAF caricherà i dati dal servizio indicato.",
+      "eng": "Ingestion via Webservice. Fill info below and we'll get data directly from there.",
+      "default": "Ingestion via Webservice. Fill info below and we'll get data directly from there."
+    },
+    "actions": [
+      {
+        "ctx": "ingform",
+        "action": "add-form-elements",
+        "elements": ["dragdrop"]
+      }
+    ]
+  }
+]

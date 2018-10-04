@@ -1,0 +1,19 @@
+[
+  {
+    "uid": "open",
+    "name": {"ita": "Open Data", "eng": "Open Data", "default": "Open Data"},
+    "desc": {
+      "ita": "Dataset aperto a chiunque.",
+      "eng": "Open data dataset, everybody can see and use it.",
+      "default": "Open data dataset"
+    }
+  },
+  {
+    "uid": "private",
+    "name": {"ita": "Dataset Privato", "eng": "Private Dataset", "default": "Private Dataset"},
+    "desc": {
+      "ita": "Dataset privato, con accesso controllato da owner.",
+      "eng": "Private dataset, with controlled access by owner.",
+      "default": "Private dataset, with controlled access by owner."
+    }
+    ]

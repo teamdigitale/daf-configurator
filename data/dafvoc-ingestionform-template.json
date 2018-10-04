@@ -1,0 +1,42 @@
+[
+  {
+    "uid": "ordinary_base",
+    "name": {"ita": "Ordinario base", "eng": "Base Ordinary", "default": "Base Ordinary"},
+    "desc": {
+      "ita": "Ordinary Dataset di base.",
+      "eng": "Plain vanilla Ordinary Dataset.",
+      "default": "Plain vanilla Ordinary Dataset."
+    },
+    "actions": [
+      {
+        "ctx": "ingform",
+        "action": "fill-variables",
+        "variables": {
+          "operational": {
+            "dataset_daf": "ord"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "uid": "voc_base",
+    "name": {"ita": "Vocabolario Controllato base", "eng": "Base Controlled Vocabulary", "default": "Base Controlled Vocabulary"},
+    "desc": {
+      "ita": "Vocabolario Controllato di base.",
+      "eng": "Plain vanilla Controlled Vocabulary",
+      "default": "Plain vanilla Controlled Vocabulary"
+    },
+    "actions": [
+      {
+        "ctx": "ingform",
+        "action": "fill-variables",
+        "variables": {
+          "operational": {
+            "dataset_daf": "voc"
+          }
+        }
+      }
+    ]
+  }
+]
