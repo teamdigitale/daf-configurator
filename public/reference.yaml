@@ -168,61 +168,6 @@ definitions:
         type: string
       fields:
         type: string
-  VocabularyFromGit:
-    type: object
-    required:
-    - name
-    - path
-    - sha
-    - size
-    - url
-    - html_url
-    - git_url
-    - download_url
-    - type
-    - content
-    - encoding
-    - _links
-    properties:
-      name:
-        type: string
-      path:
-        type: string
-      sha:
-        type: string
-      size:
-        type: string
-      url:
-        type: string
-      html_url:
-        type: string
-      git_url:
-        type: string
-      download_url:
-        type: string
-      type:
-        type: string
-      content:
-        type: string
-      encoding:
-        type: string
-      _links:
-        type: object
-        schema:
-          $ref: '#/definitions/VocabularyFromGitLinks'
-  VocabularyFromGitLinks:
-    type: object
-    requiered:
-    - self
-    - git
-    - html
-    properties:
-      self:
-        type: string
-      git:
-        type: string
-      html:
-        type: string
 externalDocs:
   description: Find out more about Swagger
   url: http://swagger.io
