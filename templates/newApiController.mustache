@@ -191,7 +191,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
         {{/headerParams}}
         {{^controllerOnly}}
             play.api.mvc.RequestHeader requestHeader = request().asScala();
-            {{#returnType}}{{>returnTypesNoVoid}} obj = {{/returnType}}imp.{{operationId}}({{#allParams}}{{paramName}}{{#hasMore}}, {{/hasMore}}{{/allParams}}, requestHeader);
+            {{#returnType}}{{>returnTypesNoVoid}} obj = {{/returnType}}imp.{{operationId}}(requestHeader{{#allParams}}, {{paramName}}{{#hasMore}}{{/hasMore}}{{/allParams}});
             {{#returnType}}
                 {{^isResponseFile}}
                     {{^returnTypeIsPrimitive}}
