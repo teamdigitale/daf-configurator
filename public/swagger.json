@@ -93,12 +93,6 @@
           "description" : "name of vocabulary to return",
           "required" : true,
           "type" : "string"
-        }, {
-          "name" : "Authorization",
-          "in" : "header",
-          "description" : "authorization token",
-          "required" : true,
-          "type" : "string"
         } ],
         "responses" : {
           "200" : {
@@ -143,6 +137,11 @@
             "description" : "Invalid input"
           }
         },
+        "security" : [ {
+          "Basic" : [ ]
+        }, {
+          "Bearer" : [ ]
+        } ],
         "x-contentType" : "application/x-www-form-urlencoded",
         "x-accepts" : "application/json"
       },
@@ -166,6 +165,11 @@
         },
         "x-accepts" : "application/json"
       }
+    }
+  },
+  "securityDefinitions" : {
+    "Basic" : {
+      "type" : "basic"
     }
   },
   "definitions" : {

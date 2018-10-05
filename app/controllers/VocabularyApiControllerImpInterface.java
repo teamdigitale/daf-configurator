@@ -15,7 +15,7 @@ import play.api.mvc.RequestHeader;
 
         void deleteVoc(RequestHeader headers, String name) throws Exception;
 
-        Vocabulary getVocById(RequestHeader headers, String name, String authorization) throws Exception;
+        Vocabulary getVocById(RequestHeader headers, String name) throws Exception;
 
         void updateVoc(RequestHeader headers, Vocabulary body) throws Exception;
 
