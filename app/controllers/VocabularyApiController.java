@@ -19,7 +19,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 
     import swagger.SwaggerUtils.ApiAction;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-10-04T17:54:16.879+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-10-05T14:18:59.768+02:00")
 
     public class VocabularyApiController extends Controller {
 
@@ -43,21 +43,28 @@ import com.fasterxml.jackson.core.type.TypeReference;
                     throw new IllegalArgumentException("'body' parameter is required");
                 }
             play.api.mvc.RequestHeader requestHeader = request().asScala();
-            imp.addVoc(body, requestHeader);
+            imp.addVoc(requestHeader, body);
                 return ok();
         }
 
         @ApiAction
         public Result deleteVoc(String name) throws Exception {
             play.api.mvc.RequestHeader requestHeader = request().asScala();
-            imp.deleteVoc(name, requestHeader);
+            imp.deleteVoc(requestHeader, name);
                 return ok();
         }
 
         @ApiAction
         public Result getVocById(String name) throws Exception {
+                String valueauthorization = request().header("Authorization").get();
+                String authorization;
+                if (valueauthorization != null) {
+                authorization = valueauthorization;
+                } else {
+                    throw new IllegalArgumentException("'Authorization' parameter is required");
+                }
             play.api.mvc.RequestHeader requestHeader = request().asScala();
-            Vocabulary obj = imp.getVocById(name, requestHeader);
+            Vocabulary obj = imp.getVocById(requestHeader, name, authorization);
                 JsonNode result = mapper.valueToTree(obj);
                 return ok(result);
         }
@@ -72,7 +79,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
                     throw new IllegalArgumentException("'body' parameter is required");
                 }
             play.api.mvc.RequestHeader requestHeader = request().asScala();
-            imp.updateVoc(body, requestHeader);
+            imp.updateVoc(requestHeader, body);
                 return ok();
         }
 
@@ -86,7 +93,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
                         voc = null;
                     }
             play.api.mvc.RequestHeader requestHeader = request().asScala();
-            imp.updateVocWithForm(name, voc, requestHeader);
+            imp.updateVocWithForm(requestHeader, name, voc);
                 return ok();
         }
     }

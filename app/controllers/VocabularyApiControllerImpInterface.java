@@ -11,14 +11,14 @@ import play.api.mvc.RequestHeader;
 
     @SuppressWarnings("RedundantThrows")
     public interface VocabularyApiControllerImpInterface {
-        void addVoc(Vocabulary body, RequestHeader headers) throws Exception;
+        void addVoc(RequestHeader headers, Vocabulary body) throws Exception;
 
-        void deleteVoc(String name, RequestHeader headers) throws Exception;
+        void deleteVoc(RequestHeader headers, String name) throws Exception;
 
-        Vocabulary getVocById(String name, RequestHeader headers) throws Exception;
+        Vocabulary getVocById(RequestHeader headers, String name, String authorization) throws Exception;
 
-        void updateVoc(Vocabulary body, RequestHeader headers) throws Exception;
+        void updateVoc(RequestHeader headers, Vocabulary body) throws Exception;
 
-        void updateVocWithForm(String name, String voc, RequestHeader headers) throws Exception;
+        void updateVocWithForm(RequestHeader headers, String name, String voc) throws Exception;
 
     }
