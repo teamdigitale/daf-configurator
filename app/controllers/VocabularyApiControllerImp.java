@@ -20,24 +20,21 @@ import java.io.FileReader;
 
 public class VocabularyApiControllerImp implements VocabularyApiControllerImpInterface {
 
-    final ActorSystem system = ActorSystem.create("daf-configurator");
-    final ActorMaterializer materializer = ActorMaterializer.create(system);
-
     final String basePath = System.getProperty("user.dir");
     final String vocPath = ConfigReader.getVocPath();
 
     @Override
-    public void addVoc(Vocabulary body, RequestHeader headers) throws Exception {
+    public void addVoc(RequestHeader headers, Vocabulary vocabulary) throws Exception {
         //Do your magic!!!
     }
 
     @Override
-    public void deleteVoc(String name, RequestHeader headers) throws Exception {
+    public void deleteVoc(RequestHeader headers, String name) throws Exception {
         //Do your magic!!!
     }
 
     @Override
-    public Vocabulary getVocById(String name, RequestHeader requestHeader) throws Exception {
+    public Vocabulary getVocById(RequestHeader requestHeader, String name, String token) throws Exception {
         UserInfo userInfo = CredentialManager.readCredentialFromRequest(requestHeader);
         if(CredentialManager.isOrgsAdmin(requestHeader, userInfo.groups()) || CredentialManager.isOrgsEditor(requestHeader, userInfo.groups())) {
             BufferedReader br = null;
@@ -71,12 +68,12 @@ public class VocabularyApiControllerImp implements VocabularyApiControllerImpInt
     }
 
     @Override
-    public void updateVoc(Vocabulary body, RequestHeader headers) throws Exception {
+    public void updateVoc( RequestHeader headers, Vocabulary body) throws Exception {
         //Do your magic!!!
     }
 
     @Override
-    public void updateVocWithForm(String name, String voc, RequestHeader headers) throws Exception {
+    public void updateVocWithForm(RequestHeader headers, String name, String voc) throws Exception {
         //Do your magic!!!
     }
 

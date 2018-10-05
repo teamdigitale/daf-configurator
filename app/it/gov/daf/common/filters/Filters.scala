@@ -22,6 +22,6 @@ import javax.inject.Inject
 import play.api.http.DefaultHttpFilters
 import play.filters.cors.CORSFilter
 
-class FiltersSecurity @Inject()(securityFilter: SecurityFilter) extends DefaultHttpFilters(securityFilter)
+class FiltersSecurity @Inject()(dafConfiguratorSecurityFilter: SecurityFilter) extends DefaultHttpFilters(dafConfiguratorSecurityFilter)
 
-class FiltersSecurityCORS @Inject()(securityFilter: SecurityFilter, corsFilter: CORSFilter) extends DefaultHttpFilters(securityFilter, corsFilter)
+class FiltersSecurityCORS @Inject()(dafConfiguratorSecurityFilter: SecurityFilter, corsFilter: CORSFilter) extends DefaultHttpFilters(dafConfiguratorSecurityFilter, corsFilter)
