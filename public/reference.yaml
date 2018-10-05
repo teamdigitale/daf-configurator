@@ -86,11 +86,11 @@ paths:
         description: name of vocabulary to return
         required: true
         type: string
-      - name: Authorization
-        in: header
-        required: true
-        description: authorization token
-        type: string
+#      - name: Authorization
+#        in: header
+#        required: true
+#        description: authorization token
+#        type: string
       responses:
         '200':
           description: successful operation
@@ -111,6 +111,9 @@ paths:
       x-accepts: application/json
       x-contentType: application/json
     post:
+      security:
+        - basic: []
+        - Bearer: []
       tags:
       - vocabulary
       summary: Updates a voc in the store with form data
@@ -155,6 +158,13 @@ paths:
         '400':
           description: Invalid vocabulary id
       x-accepts: application/json
+securityDefinitions:
+  Bearer:
+    type: http
+    scheme: bearer
+    bearerFormat: JWT
+  Basic:
+    type: basic
 definitions:
   Vocabulary:
     type: object

@@ -19,7 +19,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 
     import swagger.SwaggerUtils.ApiAction;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-10-05T14:18:59.768+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-10-05T14:50:20.183+02:00")
 
     public class VocabularyApiController extends Controller {
 
@@ -56,15 +56,8 @@ import com.fasterxml.jackson.core.type.TypeReference;
 
         @ApiAction
         public Result getVocById(String name) throws Exception {
-                String valueauthorization = request().header("Authorization").get();
-                String authorization;
-                if (valueauthorization != null) {
-                authorization = valueauthorization;
-                } else {
-                    throw new IllegalArgumentException("'Authorization' parameter is required");
-                }
             play.api.mvc.RequestHeader requestHeader = request().asScala();
-            Vocabulary obj = imp.getVocById(requestHeader, name, authorization);
+            Vocabulary obj = imp.getVocById(requestHeader, name);
                 JsonNode result = mapper.valueToTree(obj);
                 return ok(result);
         }
