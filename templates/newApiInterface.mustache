@@ -17,7 +17,7 @@ import play.api.mvc.RequestHeader;
     @SuppressWarnings("RedundantThrows")
     public interface {{classname}}ControllerImpInterface {
     {{#operation}}
-        {{>returnTypes}} {{operationId}}({{#allParams}}{{>pathParams}}{{>queryParams}}{{>bodyParams}}{{>formParams}}{{>headerParams}}{{#hasMore}}, {{/hasMore}}{{/allParams}}, RequestHeader headers) {{#handleExceptions}}throws Exception{{/handleExceptions}};
+        {{>returnTypes}} {{operationId}}(RequestHeader headers{{#allParams}}, {{>pathParams}}{{>queryParams}}{{>bodyParams}}{{>formParams}}{{>headerParams}}{{#hasMore}}{{/hasMore}}{{/allParams}}) {{#handleExceptions}}throws Exception{{/handleExceptions}};
 
     {{/operation}}
     }
