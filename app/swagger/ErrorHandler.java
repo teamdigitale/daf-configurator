@@ -2,6 +2,7 @@ package swagger;
 
 
 import apiModels.Error;
+import com.typesafe.config.Config;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import play.*;
@@ -24,7 +25,7 @@ public class ErrorHandler extends DefaultHttpErrorHandler {
     private final ObjectMapper mapper = new ObjectMapper();
 
     @Inject
-    public ErrorHandler(Configuration configuration, Environment environment, OptionalSourceMapper sourceMapper, Provider<Router> routes) {
+    public ErrorHandler(Config configuration, Environment environment, OptionalSourceMapper sourceMapper, Provider<Router> routes) {
         super(configuration, environment, sourceMapper, routes);
     }
 
