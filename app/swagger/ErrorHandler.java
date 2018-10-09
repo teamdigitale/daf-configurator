@@ -62,9 +62,7 @@ public class ErrorHandler extends DefaultHttpErrorHandler {
     }
 
 
-    private String extractTypeException(String str) {
-        return str.substring(1, str.indexOf(":"));
-    }
+    private String extractTypeException(String str) { return str.substring(0, str.indexOf(":")).trim(); }
 
     private JsonNode parseErrorToJson(Error error) {
         try{

@@ -21,12 +21,27 @@ import org.pac4j.play.http.DefaultHttpActionAdapter
 import org.pac4j.play.scala.{DefaultSecurityComponents, SecurityComponents}
 import org.pac4j.play.store.{PlayCacheSessionStore, PlaySessionStore}
 
+import scala.sys.process._
+
+
 
 class SecurityModule(environment: Environment, configuration: Configuration) extends AbstractModule {
 
 
   private def getLdapAuthenticator = {
     Logger.logger.info("Daf-Configurator 1.0.0-SNAPSHOT")
+
+
+    Logger.debug("executing module..")
+
+    Logger.debug("--env--")
+    Logger.debug("ls -l".!! )
+    Logger.debug("-------")
+    Logger.debug("ls -l conf".!! )
+    Logger.debug("-------")
+    Logger.debug("ls -l data".!! )
+    Logger.debug("-------")
+
     val connectionConfig = new ConnectionConfig
     connectionConfig.setConnectTimeout(Duration.ofMillis(configuration.getOptional[Long]("pac4j.ldap.connect_timeout").getOrElse(10000)))
     connectionConfig.setResponseTimeout(Duration.ofMillis(configuration.getOptional[Long]("pac4j.ldap.response_timeout").getOrElse(10000)))
