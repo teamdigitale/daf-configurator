@@ -2,7 +2,7 @@ import com.typesafe.sbt.packager.docker.{Cmd, ExecCmd}
 import Versions._
 
 
-name := """daf-configurator"""
+name := "daf-configurator"
 
 version := "1.0.0-SNAPSHOT"
 
@@ -65,6 +65,8 @@ routesGenerator := InjectedRoutesGenerator
 
 fork in run := true
 
+import com.typesafe.sbt.packager.MappingsHelper._
+mappings in Universal ++= directory(baseDirectory.value / "data")
 
 //dockerBaseImage := "anapsix/alpine-java:8_jdk_unlimited"
 dockerBaseImage := "openjdk:8u171-jdk-slim"
@@ -79,7 +81,7 @@ dockerBaseImage := "openjdk:8u171-jdk-slim"
 
 dockerExposedPorts := Seq(9000)
 
-dockerEntrypoint := {Seq(s"bin/${name.value}", "-Dconfig.file=conf/application.conf")}
+dockerEntrypoint := {Seq(s"bin/${name.value}", "-Dconfig.file=conf/production.conf")}
 
 dockerRepository := { if(isStaging)Option("nexus.teamdigitale.test") else Option("nexus.daf.teamdigitale.it") }
 

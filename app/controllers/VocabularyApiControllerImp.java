@@ -1,26 +1,22 @@
 package controllers;
 
-import akka.actor.ActorSystem;
-import akka.stream.ActorMaterializer;
 import apiModels.Vocabulary;
 import it.gov.daf.common.CredentialManager;
 import it.gov.daf.common.utils.UserInfo;
 import it.gov.daf.utils.ConfigReader;
 import it.gov.daf.utils.java.NotFoundException;
 import it.gov.daf.utils.java.UnauthorizedException;
+import play.Environment;
+import play.Logger;
 import play.api.mvc.RequestHeader;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-
+import java.io.*;
 
 
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-08-31T11:37:42.017+02:00")
 
 public class VocabularyApiControllerImp implements VocabularyApiControllerImpInterface {
 
-    final String basePath = System.getProperty("user.dir");
     final String vocPath = ConfigReader.getVocPath();
 
     @Override
@@ -34,13 +30,14 @@ public class VocabularyApiControllerImp implements VocabularyApiControllerImpInt
     }
 
     @Override
-    public Vocabulary getVocById(RequestHeader requestHeader, String name, String token) throws Exception {
+    public Vocabulary getVocById(RequestHeader requestHeader, String name) throws Exception {
         UserInfo userInfo = CredentialManager.readCredentialFromRequest(requestHeader);
+        Logger.debug(userInfo.username() + " get voc " + name);
         if(CredentialManager.isOrgsAdmin(requestHeader, userInfo.groups()) || CredentialManager.isOrgsEditor(requestHeader, userInfo.groups())) {
             BufferedReader br = null;
             FileReader fr = null;
             try {
-                fr = new FileReader(basePath + vocPath + name);
+                fr = new FileReader(Environment.simple().getFile("/data/" + name));
                 br = new BufferedReader(fr);
                 String sCurrentLine;
                 StringBuffer fileVoc = new StringBuffer();
