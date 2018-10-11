@@ -47,13 +47,14 @@ class ChatEngine @Inject()(socketIO: SocketIO)(implicit mat: Materializer) {
     ConsumerSettings(config, new StringDeserializer, new StringDeserializer)
 
   val done: Source[ConsumerRecord[String, String], Consumer.Control] = Consumer
-          .plainSource(consumerSettings, Subscriptions.topics("test_reatime"))
+          .plainSource(consumerSettings, Subscriptions.topics("test_realtime"))
   // .runWith(Sink.foreach(println)) // just print each message for debugging
 
   val extractKey: Flow[ConsumerRecord[String, String], String, NotUsed] =
     Flow[ConsumerRecord[String, String]].map((record) => {
       println("ALE");
-      (Json.parse(record.value()) \ "user").as[String]
+     // (Json.parse(record.value()) \ "user").as[String]
+      record.value()
 
     })
 
