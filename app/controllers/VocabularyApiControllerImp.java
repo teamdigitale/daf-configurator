@@ -31,18 +31,21 @@ public class VocabularyApiControllerImp implements VocabularyApiControllerImpInt
 
     @Override
     public Vocabulary getVocById(RequestHeader requestHeader, String name) throws Exception {
+        System.out.println("sono dentro2");
+        System.out.println(requestHeader.headers().keys());
         UserInfo userInfo = CredentialManager.readCredentialFromRequest(requestHeader);
         Logger.debug(userInfo.username() + " get voc " + name);
         if(CredentialManager.isOrgsAdmin(requestHeader, userInfo.groups()) || CredentialManager.isOrgsEditor(requestHeader, userInfo.groups())) {
+//        if(true) {
             BufferedReader br = null;
             FileReader fr = null;
             try {
-                fr = new FileReader(Environment.simple().getFile("/data/" + name));
+                fr = new FileReader(Environment.simple().getFile("/data/" + name + ".json"));
                 br = new BufferedReader(fr);
                 String sCurrentLine;
                 StringBuffer fileVoc = new StringBuffer();
                 while ((sCurrentLine = br.readLine()) != null) {
-                    fileVoc.append(sCurrentLine);
+                    fileVoc.append(sCurrentLine.replaceAll("\n", "").trim());
                 }
                 Vocabulary voc = new Vocabulary();
                 voc.setVoc(fileVoc.toString());
