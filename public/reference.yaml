@@ -78,6 +78,8 @@ paths:
       summary: Find Vocabulary by ID
       description: Returns a single Vocabulary
       operationId: getVocById
+      consumes:
+      - application/json
       produces:
       - application/json
       parameters:

@@ -51,6 +51,7 @@ public class ErrorHandler extends DefaultHttpErrorHandler {
 
     private Result handleExceptions(Throwable t, String nameException) {
         //TODO: Handle exception that need special response (return a special apimodel, notFound(), etc..)
+        Logger.debug("exception name: " + nameException);
         Error error = new Error();
         error.setMessage(t.getCause().getMessage());
         switch (nameException){
@@ -62,7 +63,10 @@ public class ErrorHandler extends DefaultHttpErrorHandler {
     }
 
 
-    private String extractTypeException(String str) { return str.substring(0, str.indexOf(":")).trim(); }
+    private String extractTypeException(String str) {
+        Logger.debug("exception: " + str);
+        return str.substring(0, str.indexOf(":")).trim();
+    }
 
     private JsonNode parseErrorToJson(Error error) {
         try{
