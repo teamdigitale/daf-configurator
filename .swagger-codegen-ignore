@@ -33,4 +33,3 @@ project/build.properties
 project/plugins.sbt
 conf/application.conf
 app/swagger/ErrorHandler.java
-app/swagger/ApiCall.java

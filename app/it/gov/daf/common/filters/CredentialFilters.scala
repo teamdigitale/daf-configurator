@@ -11,8 +11,7 @@ import play.api.mvc._
 
 import scala.concurrent.{ExecutionContext, Future}
 
-class CredentialFilter@Inject() (implicit val mat: Materializer, ec: ExecutionContext, cacheWrapper: CacheWrapper) extends Filter {
-//class CredentialFilter@Inject() (implicit val mat: Materializer, ec: ExecutionContext) extends Filter {
+class CredentialFilters @Inject() (implicit val mat: Materializer, ec: ExecutionContext, cacheWrapper: CacheWrapper) extends Filter {
 
   private val logger = Logger(this.getClass.getName)
 

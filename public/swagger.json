@@ -1,0 +1,209 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "This is a sample server Daf-Configuration server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.",
+    "version" : "1.0.0",
+    "title" : "Swagger Daf Configuration",
+    "termsOfService" : "http://swagger.io/terms/",
+    "contact" : {
+      "email" : "apiteam@swagger.io"
+    },
+    "license" : {
+      "name" : "Apache-2.0",
+      "url" : "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "basePath" : "/v2",
+  "tags" : [ {
+    "name" : "vocabulary",
+    "description" : "Everything about your Vocabularies",
+    "externalDocs" : {
+      "description" : "Find out more",
+      "url" : "http://swagger.io"
+    }
+  } ],
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/vocabularies" : {
+      "post" : {
+        "tags" : [ "vocabulary" ],
+        "summary" : "Add vocabulary",
+        "description" : "",
+        "operationId" : "addVoc",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "description" : "Vocabulary object that needs to be added to the store",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Vocabulary"
+          }
+        } ],
+        "responses" : {
+          "405" : {
+            "description" : "Invalid input"
+          }
+        },
+        "x-contentType" : "application/json",
+        "x-accepts" : "application/json"
+      },
+      "put" : {
+        "tags" : [ "vocabulary" ],
+        "summary" : "Update a vocabulary",
+        "description" : "",
+        "operationId" : "updateVoc",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "description" : "Vocabulary object that needs to be added to the store",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/Vocabulary"
+          }
+        } ],
+        "responses" : {
+          "400" : {
+            "description" : "Invalid ID supplied"
+          },
+          "404" : {
+            "description" : "Vocabulary not found"
+          },
+          "405" : {
+            "description" : "Validation exception"
+          }
+        },
+        "x-contentType" : "application/json",
+        "x-accepts" : "application/json"
+      }
+    },
+    "/vocabulary/{name}" : {
+      "get" : {
+        "tags" : [ "Vocabulary" ],
+        "summary" : "Secured API to find vocabulary by name",
+        "description" : "Return a single Vocabulary",
+        "operationId" : "getVocByName",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "name",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/Vocabulary"
+            }
+          },
+          "401" : {
+            "description" : "not authorized to get Vocabulary"
+          },
+          "404" : {
+            "description" : "Vocabulary not found"
+          },
+          "500" : {
+            "description" : "Unexpected error"
+          }
+        },
+        "x-accepts" : "application/json"
+      },
+      "post" : {
+        "tags" : [ "vocabulary" ],
+        "summary" : "Updates a voc in the store with form data",
+        "description" : "",
+        "operationId" : "updateVocWithForm",
+        "consumes" : [ "application/x-www-form-urlencoded" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "name",
+          "in" : "path",
+          "description" : "ID of vocabulary that needs to be updated",
+          "required" : true,
+          "type" : "string",
+          "format" : "int64"
+        }, {
+          "name" : "voc",
+          "in" : "formData",
+          "description" : "Updated vocabulary",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "405" : {
+            "description" : "Invalid input"
+          }
+        },
+        "security" : [ {
+          "basic" : [ ]
+        }, {
+          "Bearer" : [ ]
+        } ],
+        "x-contentType" : "application/x-www-form-urlencoded",
+        "x-accepts" : "application/json"
+      },
+      "delete" : {
+        "tags" : [ "vocabulary" ],
+        "summary" : "Deletes a vocabulary",
+        "description" : "",
+        "operationId" : "deleteVoc",
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "name",
+          "in" : "path",
+          "description" : "Voc id to delete",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "400" : {
+            "description" : "Invalid vocabulary id"
+          }
+        },
+        "x-accepts" : "application/json"
+      }
+    }
+  },
+  "securityDefinitions" : {
+    "Basic" : {
+      "type" : "basic"
+    }
+  },
+  "definitions" : {
+    "Vocabulary" : {
+      "type" : "object",
+      "required" : [ "voc" ],
+      "properties" : {
+        "voc" : {
+          "type" : "string"
+        }
+      },
+      "example" : {
+        "voc" : "voc"
+      }
+    },
+    "Error" : {
+      "type" : "object",
+      "properties" : {
+        "code" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "fields" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
+  "externalDocs" : {
+    "description" : "Find out more about Swagger",
+    "url" : "http://swagger.io"
+  }
+}

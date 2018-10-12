@@ -1,0 +1,93 @@
+2018-10-11 10:50:22,962 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-3 - Daf-Configurator 1.0.0-SNAPSHOT
+2018-10-11 10:50:22,962 [DEBUG] from application in play-dev-mode-akka.actor.default-dispatcher-3 - executing module..
+2018-10-11 10:50:22,963 [DEBUG] from application in play-dev-mode-akka.actor.default-dispatcher-3 - --env--
+2018-10-11 10:50:22,982 [DEBUG] from application in play-dev-mode-akka.actor.default-dispatcher-3 - totale 68
+drwxrwxr-x 6 luca luca 4096 ott 10 16:53 app
+-rw-rw-r-- 1 luca luca  286 set 10 10:11 AUTHORS
+-rw-rw-r-- 1 luca luca 3315 ott 11 10:10 build.sbt
+drwxrwxr-x 5 luca luca 4096 ott 11 10:48 conf
+drwxrwxr-x 2 luca luca 4096 ott  9 11:51 data
+drwxrwxr-x 2 luca luca 4096 ott  9 09:34 kubernetes
+-rw-rw-r-- 1 luca luca  591 set 10 10:11 LICENSE
+drwxrwxr-x 2 luca luca 4096 ott  8 15:22 localConfigs
+drwxrwxr-x 2 luca luca 4096 ott 11 10:50 logs
+-rw-rw-r-- 1 luca luca  574 set 10 10:11 PlayServerTests.iml
+-rw-rw-r-- 1 luca luca 3823 ott 10 12:34 pom.xml
+drwxrwxr-x 4 luca luca 4096 ott 10 11:52 project
+drwxrwxr-x 2 luca luca 4096 ott 10 16:53 public
+-rw-rw-r-- 1 luca luca  146 set 10 10:11 README
+-rw-rw-r-- 1 luca luca  766 set 10 10:11 README.md
+drwxrwxr-x 6 luca luca 4096 ott 11 10:50 target
+drwxrwxr-x 2 luca luca 4096 ott  8 16:36 templates
+
+2018-10-11 10:50:22,983 [DEBUG] from application in play-dev-mode-akka.actor.default-dispatcher-3 - -------
+2018-10-11 10:50:22,995 [DEBUG] from application in play-dev-mode-akka.actor.default-dispatcher-3 - totale 40
+-rw-rw-r-- 1 luca luca 14414 ott 11 10:48 application.conf
+-rw-rw-r-- 1 luca luca  1600 ott 10 16:53 logback.xml
+drwxrwxr-x 2 luca luca  4096 ott  8 15:07 mnt
+drwxrwxr-x 2 luca luca  4096 ott  9 15:42 prod
+-rw-rw-r-- 1 luca luca   140 ott  9 11:20 production.conf
+-rw-rw-r-- 1 luca luca   967 ott 10 16:55 routes
+drwxrwxr-x 2 luca luca  4096 ott  9 10:25 test
+
+2018-10-11 10:50:22,995 [DEBUG] from application in play-dev-mode-akka.actor.default-dispatcher-3 - -------
+2018-10-11 10:50:23,007 [DEBUG] from application in play-dev-mode-akka.actor.default-dispatcher-3 - totale 56
+-rw-rw-r-- 1 luca luca 13693 ott  4 16:46 cv_theme-subtheme.json
+-rw-rw-r-- 1 luca luca   454 ott  4 16:47 dafvoc-ingestionform-fieldtype.json
+-rw-rw-r-- 1 luca luca   499 ott  4 16:47 dafvoc-ingestionform-filetype.json
+-rw-rw-r-- 1 luca luca  1104 ott  4 16:47 dafvoc-ingestionform-ingtype.json
+-rw-rw-r-- 1 luca luca 14961 ott  9 11:51 dafvoc-ingestionform-option.json
+-rw-rw-r-- 1 luca luca  1044 ott  4 16:48 dafvoc-ingestionform-template.json
+-rw-rw-r-- 1 luca luca   622 ott  4 16:48 dafvoc-ingform-dataset_visibility.json
+-rw-rw-r-- 1 luca luca  1655 ott  4 16:54 dafvoc-ingform-newtype.json
+
+2018-10-11 10:50:23,008 [DEBUG] from application in play-dev-mode-akka.actor.default-dispatcher-3 - -------
+2018-10-11 10:50:25,357 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-3 - CacheWrapper initialized with cookieTtlMin:0 and credentialTtlMin 0
+2018-10-11 10:50:25,407 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-3 - Application started (Dev)
+2018-10-11 10:50:25,943 [DEBUG] from application in play-dev-mode-akka.actor.default-dispatcher-3 - exception: [NoSuchElementException: None.get]
+2018-10-11 10:50:25,944 [DEBUG] from application in play-dev-mode-akka.actor.default-dispatcher-3 - exception name: [NoSuchElementException
+2018-10-11 10:58:04,522 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-8 - Daf-Configurator 1.0.0-SNAPSHOT
+2018-10-11 10:58:04,522 [DEBUG] from application in play-dev-mode-akka.actor.default-dispatcher-8 - executing module..
+2018-10-11 10:58:04,523 [DEBUG] from application in play-dev-mode-akka.actor.default-dispatcher-8 - --env--
+2018-10-11 10:58:04,531 [DEBUG] from application in play-dev-mode-akka.actor.default-dispatcher-8 - totale 68
+drwxrwxr-x 6 luca luca 4096 ott 10 16:53 app
+-rw-rw-r-- 1 luca luca  286 set 10 10:11 AUTHORS
+-rw-rw-r-- 1 luca luca 3315 ott 11 10:10 build.sbt
+drwxrwxr-x 5 luca luca 4096 ott 11 10:52 conf
+drwxrwxr-x 2 luca luca 4096 ott  9 11:51 data
+drwxrwxr-x 2 luca luca 4096 ott  9 09:34 kubernetes
+-rw-rw-r-- 1 luca luca  591 set 10 10:11 LICENSE
+drwxrwxr-x 2 luca luca 4096 ott  8 15:22 localConfigs
+drwxrwxr-x 2 luca luca 4096 ott 11 10:50 logs
+-rw-rw-r-- 1 luca luca  574 set 10 10:11 PlayServerTests.iml
+-rw-rw-r-- 1 luca luca 3823 ott 10 12:34 pom.xml
+drwxrwxr-x 4 luca luca 4096 ott 10 11:52 project
+drwxrwxr-x 2 luca luca 4096 ott 10 16:53 public
+-rw-rw-r-- 1 luca luca  146 set 10 10:11 README
+-rw-rw-r-- 1 luca luca  766 set 10 10:11 README.md
+drwxrwxr-x 6 luca luca 4096 ott 11 10:50 target
+drwxrwxr-x 2 luca luca 4096 ott  8 16:36 templates
+
+2018-10-11 10:58:04,532 [DEBUG] from application in play-dev-mode-akka.actor.default-dispatcher-8 - -------
+2018-10-11 10:58:04,542 [DEBUG] from application in play-dev-mode-akka.actor.default-dispatcher-8 - totale 40
+-rw-rw-r-- 1 luca luca 14412 ott 11 10:52 application.conf
+-rw-rw-r-- 1 luca luca  1600 ott 10 16:53 logback.xml
+drwxrwxr-x 2 luca luca  4096 ott  8 15:07 mnt
+drwxrwxr-x 2 luca luca  4096 ott  9 15:42 prod
+-rw-rw-r-- 1 luca luca   140 ott  9 11:20 production.conf
+-rw-rw-r-- 1 luca luca   967 ott 10 16:55 routes
+drwxrwxr-x 2 luca luca  4096 ott  9 10:25 test
+
+2018-10-11 10:58:04,543 [DEBUG] from application in play-dev-mode-akka.actor.default-dispatcher-8 - -------
+2018-10-11 10:58:04,555 [DEBUG] from application in play-dev-mode-akka.actor.default-dispatcher-8 - totale 56
+-rw-rw-r-- 1 luca luca 13693 ott  4 16:46 cv_theme-subtheme.json
+-rw-rw-r-- 1 luca luca   454 ott  4 16:47 dafvoc-ingestionform-fieldtype.json
+-rw-rw-r-- 1 luca luca   499 ott  4 16:47 dafvoc-ingestionform-filetype.json
+-rw-rw-r-- 1 luca luca  1104 ott  4 16:47 dafvoc-ingestionform-ingtype.json
+-rw-rw-r-- 1 luca luca 14961 ott  9 11:51 dafvoc-ingestionform-option.json
+-rw-rw-r-- 1 luca luca  1044 ott  4 16:48 dafvoc-ingestionform-template.json
+-rw-rw-r-- 1 luca luca   622 ott  4 16:48 dafvoc-ingform-dataset_visibility.json
+-rw-rw-r-- 1 luca luca  1655 ott  4 16:54 dafvoc-ingform-newtype.json
+
+2018-10-11 10:58:04,556 [DEBUG] from application in play-dev-mode-akka.actor.default-dispatcher-8 - -------
+2018-10-11 10:58:05,308 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-8 - Application started (Dev)

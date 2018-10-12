@@ -66,7 +66,6 @@ fork in run := true
 
 import com.typesafe.sbt.packager.MappingsHelper._
 mappings in Universal ++= directory(baseDirectory.value / "data")
-
 dockerBuildOptions ++= Seq("--network", "host")
 
 //dockerBaseImage := "anapsix/alpine-java:8_jdk_unlimited"

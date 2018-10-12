@@ -1,0 +1,17 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET     /api                        controllers.ApiDocController.api
+
+
+#Functions for Vocabulary API
+POST     /v2/vocabularies                     controllers.VocabularyApiController.addVoc()
+DELETE     /v2/vocabulary/:name                     controllers.VocabularyApiController.deleteVoc(name: String)
+GET     /v2/vocabulary/:name                     controllers.VocabularyApiController.getVocByName(name: String)
+PUT     /v2/vocabularies                     controllers.VocabularyApiController.updateVoc()
+POST     /v2/vocabulary/:name                     controllers.VocabularyApiController.updateVocWithForm(name: String)
+
+# Map static resources from the /public folder to the /assets URL path
+GET /assets/*file           controllers.Assets.at(file)
+GET /versionedAssets/*file  controllers.Assets.versioned(file)
