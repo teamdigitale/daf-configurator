@@ -632,6 +632,22 @@
       "fields": [
         {"label":"Param", "val":"param"}
       ]
+    },
+    {
+      "pipelines": [
+        {
+          "uid": "pipeline1",
+          "name": {
+            "ita":"Pipeline 1"
+          }
+        },
+        {
+          "uid": "pipeline2",
+          "name": {
+            "ita": "Pipeline 2"
+          }
+        }
+      ]
     }
   ]
 }

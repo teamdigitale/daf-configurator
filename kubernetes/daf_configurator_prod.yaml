@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: daf-configurator
-        image: nexus.daf.teamdigitale.it/daf-configurator:1.0.0-SNAPSHOT
+        image: nexus.daf.teamdigitale.it/daf-configurator:1.0.1
         imagePullPolicy: Always
         ports:
         - name: client
