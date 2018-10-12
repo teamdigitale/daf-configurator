@@ -1,6 +1,6 @@
 object Versions {
 
-  lazy val defaultVersion = "1.0.1"
+  lazy val defaultVersion = "1.0.2"
 
   val playPac4jVersion = "6.0.0"
 

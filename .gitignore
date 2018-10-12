@@ -5,3 +5,14 @@ target
 /project/project
 /project/target
 /localConfigs/*
+/app/apiModels/Error.java
+/app/apiModels/Vocabulary.java
+/app/controllers/VocabularyApiController.java
+/app/controllers/VocabularyApiControllerImpInterface.java
+/conf/logback.xml
+/conf/routes
+/app/Module.java
+/app/swagger/SwaggerUtils.java
+/public/swagger.json
+/app/controllers/ApiDocController.java
+/.swagger-codegen/VERSION
