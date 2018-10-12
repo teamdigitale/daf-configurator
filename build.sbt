@@ -2,56 +2,13 @@ import com.typesafe.sbt.packager.docker.{Cmd, ExecCmd}
 import Versions._
 
 
-name := """daf-configurator"""
+name := "daf-configurator"
 
-version := "1.0.0-SNAPSHOT"
-
-val isStaging = System.getProperty("STAGING") != null
+val isStaging = sys.env.getOrElse("DEPLOY_ENV", "test") == "test"
 
 lazy val root = (project in file(".")).enablePlugins(PlayJava, DockerPlugin)
 
 scalaVersion := "2.12.2"
-
-//val playLibraries = Seq(
-//  "org.pac4j"          %% "play-pac4j"       % "6.0.0",
-//  "org.pac4j"          % "pac4j-http"       % "3.0.0",
-//  "org.pac4j"          % "pac4j-jwt"        % "3.0.0" exclude("commons-io", "commons-io"),
-//  "org.pac4j"          % "pac4j-ldap"       % "3.0.0"
-//)
-//
-//libraryDependencies += "org.webjars" % "swagger-ui" % "3.1.5"
-//libraryDependencies += "javax.validation" % "validation-api" % "1.1.0.Final"
-//libraryDependencies += guice
-//libraryDependencies += cache
-//
-//libraryDependencies ++= playLibraries
-
-
-
-//libraryDependencies ++= Seq(
-//  guice,
-//  cacheApi,
-//  ws,
-//  filters,
-//  "org.pac4j"          %% "play-pac4j"       % "6.0.0",
-//  "org.pac4j"          %% "play-pac4j"       % playPac4jVersion,
-//  "org.pac4j"          % "pac4j-http"       % "3.0.0",
-//  "org.pac4j"          % "pac4j-http"       % pac4jVersion,
-//  "org.pac4j"          % "pac4j-jwt"        % "3.0.0" exclude("commons-io", "commons-io"),
-//  "org.pac4j"          % "pac4j-jwt"        % pac4jVersion exclude("commons-io", "commons-io"),
-//  "org.pac4j"          % "pac4j-ldap"       % "3.0.0",
-//  "org.pac4j" % "pac4j-ldap" % pac4jVersion,
-//  "org.webjars" % "swagger-ui" % "3.1.5",
-//  "javax.validation" % "validation-api" % "1.1.0.Final",
-//dal sito
-//  "org.pac4j" % "pac4j-oauth" % pac4jVersion,
-//?
-//  "org.pac4j" % "pac4j-cas" % pac4jVersion,
-//  "org.pac4j" % "pac4j-openid" % pac4jVersion exclude("xml-apis" , "xml-apis"),
-//  "org.pac4j" % "pac4j-saml" % pac4jVersion//,
-
-//  "com.typesafe.play" % "play-cache_2.12" % playVersion
-//)
 
 libraryDependencies ++= Seq(
   guice,
@@ -74,7 +31,9 @@ libraryDependencies ++= Seq(
   //  "org.pac4j" % "pac4j-kerberos" % pac4jVersion,
   //  "org.pac4j" % "pac4j-couch" % pac4jVersion,
   "com.typesafe.play" % "play-cache_2.12" % playVersion,
-  "commons-io" % "commons-io" % "2.5"
+  "org.apache.httpcomponents" % "httpclient" % "4.1.1",
+  "commons-io" % "commons-io" % "2.5",
+  "com.github.cb372" %% "scalacache-guava" % "0.9.4"
 )
 
 
@@ -96,8 +55,6 @@ val soptsNoTest = Seq(
   "-Ywarn-value-discard"
 )
 
-//routesGenerator := InjectedRoutesGenerator
-
 scalacOptions in (Compile, doc) ++= sopts ++ soptsNoTest
 scalacOptions in Test ++= sopts
 
@@ -107,6 +64,10 @@ routesGenerator := InjectedRoutesGenerator
 
 fork in run := true
 
+import com.typesafe.sbt.packager.MappingsHelper._
+mappings in Universal ++= directory(baseDirectory.value / "data")
+
+dockerBuildOptions ++= Seq("--network", "host")
 
 //dockerBaseImage := "anapsix/alpine-java:8_jdk_unlimited"
 dockerBaseImage := "openjdk:8u171-jdk-slim"
@@ -121,7 +82,7 @@ dockerBaseImage := "openjdk:8u171-jdk-slim"
 
 dockerExposedPorts := Seq(9000)
 
-dockerEntrypoint := {Seq(s"bin/${name.value}", "-Dconfig.file=conf/application.conf")}
+dockerEntrypoint := {Seq(s"bin/${name.value}", "-Dconfig.file=conf/production.conf")}
 
 dockerRepository := { if(isStaging)Option("nexus.teamdigitale.test") else Option("nexus.daf.teamdigitale.it") }
 
@@ -136,6 +97,5 @@ publishTo in ThisBuild := {
     Some("releases"  at nexus + "maven-releases/")
 }
 
-credentials += {if(isStaging) Credentials(Path.userHome / ".ivy2" / ".credentialsTest") else Credentials(Path.userHome / ".ivy2" / ".credentials")}
-
-
+credentials += Credentials(Path.userHome / ".ivy2" / ".credentials")
+// credentials += {if(isStaging) Credentials(Path.userHome / ".ivy2" / ".credentialsTest") else Credentials(Path.userHome / ".ivy2" / ".credentials")}

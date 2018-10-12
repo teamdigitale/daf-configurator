@@ -5,92 +5,64 @@ import java.util.Set;
 import javax.validation.*;
 import java.util.Objects;
 /**
- * A vocabulary for standardization
- */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-09-10T12:22:52.345+02:00")
+* Vocabulary
+*/
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-10-12T12:25:39.774+02:00")
 
 @SuppressWarnings({"UnusedReturnValue", "WeakerAccess"})
 public class Vocabulary   {
-  @JsonProperty("id")
-  private Long id = null;
+    @JsonProperty("voc")
+    private String voc = null;
 
-  @JsonProperty("name")
-  private String name = null;
-
-  public Vocabulary id(Long id) {
-    this.id = id;
-    return this;
-  }
-
-   /**
-   * Get id
-   * @return id
-  **/
-    public Long getId() {
-    return id;
-  }
-
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-  public Vocabulary name(String name) {
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Get name
-   * @return name
-  **/
-    public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
-  @Override
-  public boolean equals(java.lang.Object o) {
-    if (this == o) {
-      return true;
+    public Vocabulary voc(String voc) {
+        this.voc = voc;
+        return this;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+
+    /**
+    * Get voc
+    * @return voc
+    **/
+    public String getVoc() {
+        return voc;
     }
-    Vocabulary vocabulary = (Vocabulary) o;
-    return Objects.equals(id, vocabulary.id) &&
-        Objects.equals(name, vocabulary.name);
-  }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(id, name);
-  }
-
-  @SuppressWarnings("StringBufferReplaceableByString")
-  @Override
-  public String toString() {
-    StringBuilder sb = new StringBuilder();
-    sb.append("class Vocabulary {\n");
-    
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("}");
-    return sb.toString();
-  }
-
-  /**
-   * Convert the given object to string with each line indented by 4 spaces
-   * (except the first line).
-   */
-  private String toIndentedString(java.lang.Object o) {
-    if (o == null) {
-      return "null";
+    public void setVoc(String voc) {
+        this.voc = voc;
     }
-    return o.toString().replace("\n", "\n    ");
-  }
+
+
+    @Override
+    public boolean equals(java.lang.Object o) {
+        if (this == o) return true;
+        if (o == null || !(o instanceof Vocabulary) ) return false;
+        Vocabulary vocabulary = (Vocabulary) o;
+        return Objects.equals(voc, vocabulary.voc);
+        
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(voc);
+    }
+
+    @SuppressWarnings("StringBufferReplaceableByString")
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("class Vocabulary {\n");
+        
+        sb.append("    voc: ").append(toIndentedString(voc)).append("\n");
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+    * Convert the given object to string with each line indented by 4 spaces
+    * (except the first line).
+    */
+    private String toIndentedString(java.lang.Object o) {
+        if (o == null) return "null";
+        return o.toString().replace("\n", "\n    ");
+    }
 }
-

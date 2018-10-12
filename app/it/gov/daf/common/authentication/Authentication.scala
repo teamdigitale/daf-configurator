@@ -1,5 +1,6 @@
 package it.gov.daf.common.authentication
 
+import java.util
 import java.util.Date
 
 import com.nimbusds.jwt.JWTClaimsSet
@@ -43,7 +44,6 @@ object Authentication extends Results {
     jwtAuthenticator.addSignatureConfiguration(new SecretSignatureConfiguration(secret.getOrElse(throw new Exception("missing secret"))))
     token.map(jwtAuthenticator.validateTokenAndGetClaims(_).asScala)
   }
-
 
   def getProfiles(request: RequestHeader): List[CommonProfile] = {
     val webContext = new PlayWebContext(request, playSessionStore.getOrElse(throw new Exception("missing playSessionStore")))

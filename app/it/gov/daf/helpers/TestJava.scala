@@ -6,8 +6,7 @@ object TestJava {
 
   def test() :Vocabulary =  {
     var voc = new Vocabulary()
-    voc.setId(0L)
-    voc.setName("Ale")
+    voc.setVoc("Ale")
     voc
   }
 }

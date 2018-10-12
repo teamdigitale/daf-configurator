@@ -1,0 +1,18 @@
+[
+  {
+    "uid": "csv",
+    "name": {"default": "csv"},
+    "desc": {
+      "ita": "Formato dati tabellare, campi separati da delimitatore parametrico, virgola di default.",
+      "eng": "Tabular data format, fields are separated by parametric delimitator, comma by default.",
+      "default": "Tabular data format, fields are separated by parametric delimitator, comma by default."
+    }
+  },
+  {
+    "uid": "json",
+    "name": {"default": "json"},
+    "desc": {
+      "default": "JSON"
+    }
+  }
+]
