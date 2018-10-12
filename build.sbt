@@ -32,7 +32,8 @@ libraryDependencies ++= Seq(
   //  "org.pac4j" % "pac4j-couch" % pac4jVersion,
   "com.typesafe.play" % "play-cache_2.12" % playVersion,
   "org.apache.httpcomponents" % "httpclient" % "4.1.1",
-  "commons-io" % "commons-io" % "2.5"
+  "commons-io" % "commons-io" % "2.5",
+  "com.github.cb372" %% "scalacache-guava" % "0.9.4"
 )
 
 

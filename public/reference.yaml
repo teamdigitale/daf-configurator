@@ -78,6 +78,8 @@ paths:
       summary: Find Vocabulary by ID
       description: Returns a single Vocabulary
       operationId: getVocById
+      consumes:
+      - application/json
       produces:
       - application/json
       parameters:
@@ -186,4 +188,3 @@ definitions:
 externalDocs:
   description: Find out more about Swagger
   url: http://swagger.io
-
