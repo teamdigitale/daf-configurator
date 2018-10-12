@@ -8,7 +8,7 @@ GET     /api                        controllers.ApiDocController.api
 #Functions for Vocabulary API
 POST     /v2/vocabularies                     controllers.VocabularyApiController.addVoc()
 DELETE     /v2/vocabulary/:name                     controllers.VocabularyApiController.deleteVoc(name: String)
-GET     /v2/vocabulary/:name                     controllers.VocabularyApiController.getVocById(name: String)
+GET     /v2/vocabulary/:name                     controllers.VocabularyApiController.getVocByName(name: String)
 PUT     /v2/vocabularies                     controllers.VocabularyApiController.updateVoc()
 POST     /v2/vocabulary/:name                     controllers.VocabularyApiController.updateVocWithForm(name: String)
 

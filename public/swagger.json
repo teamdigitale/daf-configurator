@@ -83,15 +83,13 @@
     "/vocabulary/{name}" : {
       "get" : {
         "tags" : [ "Vocabulary" ],
-        "summary" : "Find Vocabulary by ID",
-        "description" : "Returns a single Vocabulary",
-        "operationId" : "getVocById",
-        "consumes" : [ "application/json" ],
+        "summary" : "Secured API to find vocabulary by name",
+        "description" : "Return a single Vocabulary",
+        "operationId" : "getVocByName",
         "produces" : [ "application/json" ],
         "parameters" : [ {
           "name" : "name",
           "in" : "path",
-          "description" : "name of vocabulary to return",
           "required" : true,
           "type" : "string"
         } ],
@@ -102,15 +100,17 @@
               "$ref" : "#/definitions/Vocabulary"
             }
           },
-          "400" : {
-            "description" : "Invalid ID supplied"
+          "401" : {
+            "description" : "not authorized to get Vocabulary"
           },
           "404" : {
             "description" : "Vocabulary not found"
+          },
+          "500" : {
+            "description" : "Unexpected error"
           }
         },
-        "x-accepts" : "application/json",
-        "x-contentType" : "application/json"
+        "x-accepts" : "application/json"
       },
       "post" : {
         "tags" : [ "vocabulary" ],
