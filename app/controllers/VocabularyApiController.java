@@ -19,11 +19,11 @@ import com.fasterxml.jackson.core.type.TypeReference;
 
     import swagger.SwaggerUtils.ApiAction;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-10-11T11:15:54.669+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-10-12T16:03:26.541+02:00")
 
-    public class VocabularyApiController extends Controller {
+public class VocabularyApiController extends Controller {
 
-        private final VocabularyApiControllerImpInterface imp;
+    private final VocabularyApiControllerImpInterface imp;
     private final ObjectMapper mapper;
 
     @Inject
@@ -33,12 +33,12 @@ import com.fasterxml.jackson.core.type.TypeReference;
     }
 
 
-        @ApiAction
-        public Result addVoc() throws Exception {
-                JsonNode nodebody = request().body().asJson();
-                Vocabulary body;
-                if (nodebody != null) {
-                body = mapper.readValue(nodebody.toString(), Vocabulary.class);
+    @ApiAction
+    public Result addVoc() throws Exception {
+        JsonNode nodebody = request().body().asJson();
+        Vocabulary body;
+        if (nodebody != null) {
+            body = mapper.readValue(nodebody.toString(), Vocabulary.class);
                 } else {
                     throw new IllegalArgumentException("'body' parameter is required");
                 }
@@ -47,27 +47,27 @@ import com.fasterxml.jackson.core.type.TypeReference;
                 return ok();
         }
 
-        @ApiAction
-        public Result deleteVoc(String name) throws Exception {
+    @ApiAction
+    public Result deleteVoc(String name) throws Exception {
             play.api.mvc.RequestHeader requestHeader = request().asScala();
             imp.deleteVoc(requestHeader, name);
                 return ok();
         }
 
-        @ApiAction
-        public Result getVocById(String name) throws Exception {
+    @ApiAction
+    public Result getVocByName(String name) throws Exception {
             play.api.mvc.RequestHeader requestHeader = request().asScala();
-            Vocabulary obj = imp.getVocById(requestHeader, name);
+            Vocabulary obj = imp.getVocByName(requestHeader, name);
                 JsonNode result = mapper.valueToTree(obj);
                 return ok(result);
         }
 
-        @ApiAction
-        public Result updateVoc() throws Exception {
-                JsonNode nodebody = request().body().asJson();
-                Vocabulary body;
-                if (nodebody != null) {
-                body = mapper.readValue(nodebody.toString(), Vocabulary.class);
+    @ApiAction
+    public Result updateVoc() throws Exception {
+        JsonNode nodebody = request().body().asJson();
+        Vocabulary body;
+        if (nodebody != null) {
+            body = mapper.readValue(nodebody.toString(), Vocabulary.class);
                 } else {
                     throw new IllegalArgumentException("'body' parameter is required");
                 }
@@ -76,8 +76,8 @@ import com.fasterxml.jackson.core.type.TypeReference;
                 return ok();
         }
 
-        @ApiAction
-        public Result updateVocWithForm(String name) throws Exception {
+    @ApiAction
+    public Result updateVocWithForm(String name) throws Exception {
                     String valuevoc = (request().body().asMultipartFormData().asFormUrlEncoded().get("voc"))[0];
                     String voc;
                     if (valuevoc != null) {

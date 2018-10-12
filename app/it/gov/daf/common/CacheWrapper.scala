@@ -2,6 +2,7 @@ package it.gov.daf.common
 
 import com.google.common.cache.CacheBuilder
 import com.google.inject.Singleton
+import it.gov.daf.utils.ConfigReader
 import play.api.Logger
 import play.api.mvc.Cookie
 import scalacache._
@@ -12,15 +13,10 @@ import scala.concurrent.duration._
 
 
 @Singleton
-class CacheWrapper @Inject() () {
+class CacheWrapper @Inject() (){
 
-//  require(cookieTtlMin.nonEmpty , "CacheWrapper configuration error: cookies ttl must be set")
-//  require(credentialTtlMin.nonEmpty, "CacheWrapper configuration error: credentials ttl must be set")
-
-  Logger.logger.info(s"CacheWrapper initialized with cookieTtlMin:$cookieTtlMin and credentialTtlMin $credentialTtlMin")
-
-  private val cookieTtlMin = 480
-  private val credentialTtlMin = 30
+  private val cookieTtlMin = ConfigReader.getCookieRtlMin
+  private val credentialTtlMin = ConfigReader.getCredentialTtlMin
 
   private val guavaCache = CacheBuilder.newBuilder().maximumSize(10000L).build[String, Object]
   private implicit val cache = ScalaCache(GuavaCache(guavaCache))

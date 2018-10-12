@@ -1,4 +1,4 @@
-package it.gov.daf.common.filters.authentication
+package it.gov.daf.common.filters
 
 import akka.stream.Materializer
 import javax.inject.{Inject, Singleton}
