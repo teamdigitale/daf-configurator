@@ -3,7 +3,6 @@ package it.gov.daf.common
 import com.google.common.cache.CacheBuilder
 import com.google.inject.Singleton
 import it.gov.daf.utils.ConfigReader
-import play.api.Logger
 import play.api.mvc.Cookie
 import scalacache._
 import scalacache.guava.GuavaCache
