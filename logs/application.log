@@ -1,5 +1,0 @@
-2018-10-05 14:19:35,905 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-2 - Daf-Configurator 1.0.0-SNAPSHOT
-2018-10-05 14:19:40,316 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-2 - Application started (Dev)
-2018-10-05 14:19:40,762 [INFO] from application in application-akka.actor.default-dispatcher-5 - belonging to groups: List(default_org, open_data_group, 4eb41cda-e569-11e7-91da-fa163e3835e3, test_sicurezza, ipausers, sftponly, daf_roles, daf_edt_test_sicurezza, daf_editors, daf_organizations)
-2018-10-05 14:19:40,766 [INFO] from application in application-akka.actor.default-dispatcher-5 - belonging to groups: List(default_org, open_data_group, 4eb41cda-e569-11e7-91da-fa163e3835e3, test_sicurezza, ipausers, sftponly, daf_roles, daf_edt_test_sicurezza, daf_editors, daf_organizations)
-2018-10-05 14:37:20,823 [INFO] from play.core.server.AkkaHttpServer in pool-155-thread-6 - Stopping server...

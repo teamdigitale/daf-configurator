@@ -7,7 +7,7 @@ import java.util.Objects;
 /**
 * Error
 */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-10-08T11:51:18.206+02:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaPlayFrameworkCodegen", date = "2018-10-12T12:25:39.774+02:00")
 
 @SuppressWarnings({"UnusedReturnValue", "WeakerAccess"})
 public class Error   {
