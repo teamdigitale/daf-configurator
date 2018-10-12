@@ -9,6 +9,7 @@ pipeline {
             }
             steps {
                 slackSend (message: "BUILD START: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' CHECK THE RESULT ON: https://cd.daf.teamdigitale.it/blue/organizations/jenkins/daf-srv-configurator/activity")
+                sh 'pwd'
                 sh 'maven/bin/mvn clean compile'
             }
 
