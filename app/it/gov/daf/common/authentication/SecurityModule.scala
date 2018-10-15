@@ -22,8 +22,6 @@ import org.pac4j.play.store.{PlayCacheSessionStore, PlaySessionStore}
 
 import scala.sys.process._
 
-
-
 class SecurityModule(environment: Environment, configuration: Configuration) extends AbstractModule {
 
 
@@ -85,7 +83,7 @@ class SecurityModule(environment: Environment, configuration: Configuration) ext
 
   override def configure(): Unit = {
 
-    Logger.logger.info(s"Daf-Configurator 1.0.2")
+    Logger.logger.info(s"Daf-Configurator 1.0.3")
 
     Logger.debug("executing module..")
 

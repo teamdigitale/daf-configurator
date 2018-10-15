@@ -5,8 +5,7 @@ target
 /project/project
 /project/target
 /localConfigs/*
-/app/apiModels/Error.java
-/app/apiModels/Vocabulary.java
+/app/apiModels/*
 /app/controllers/VocabularyApiController.java
 /app/controllers/VocabularyApiControllerImpInterface.java
 /conf/logback.xml
