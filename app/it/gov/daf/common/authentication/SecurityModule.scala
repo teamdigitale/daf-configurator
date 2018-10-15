@@ -4,7 +4,6 @@ import com.google.inject.AbstractModule
 import java.security.InvalidParameterException
 import java.time.Duration
 
-import javax.inject.Inject
 import org.pac4j.core.client.Clients
 import org.pac4j.http.client.direct.{DirectBasicAuthClient, HeaderClient}
 import org.pac4j.http.credentials.authenticator.test.SimpleTestUsernamePasswordAuthenticator
@@ -22,8 +21,6 @@ import org.pac4j.play.scala.{DefaultSecurityComponents, SecurityComponents}
 import org.pac4j.play.store.{PlayCacheSessionStore, PlaySessionStore}
 
 import scala.sys.process._
-
-
 
 class SecurityModule(environment: Environment, configuration: Configuration) extends AbstractModule {
 
@@ -86,7 +83,7 @@ class SecurityModule(environment: Environment, configuration: Configuration) ext
 
   override def configure(): Unit = {
 
-    Logger.logger.info("Daf-Configurator 1.0.0-SNAPSHOT - 2")
+    Logger.logger.info(s"Daf-Configurator 1.0.3-SNAPSHOT")
 
     Logger.debug("executing module..")
 

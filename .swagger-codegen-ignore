@@ -29,7 +29,7 @@ AUTHORS
 README
 build.sbt
 pom.xml
+project/build.properties
 project/plugins.sbt
 conf/application.conf
-
 app/swagger/ErrorHandler.java

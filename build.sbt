@@ -4,9 +4,7 @@ import Versions._
 
 name := "daf-configurator"
 
-version := "1.0.0-SNAPSHOT"
-
-val isStaging = System.getProperty("STAGING") != null
+val isStaging = sys.env.getOrElse("DEPLOY_ENV", "test") == "test"
 
 lazy val root = (project in file(".")).enablePlugins(PlayJava, DockerPlugin)
 
@@ -68,6 +66,7 @@ fork in run := true
 
 import com.typesafe.sbt.packager.MappingsHelper._
 mappings in Universal ++= directory(baseDirectory.value / "data")
+dockerBuildOptions ++= Seq("--network", "host")
 
 //dockerBaseImage := "anapsix/alpine-java:8_jdk_unlimited"
 dockerBaseImage := "openjdk:8u171-jdk-slim"
@@ -97,6 +96,5 @@ publishTo in ThisBuild := {
     Some("releases"  at nexus + "maven-releases/")
 }
 
-credentials += {if(isStaging) Credentials(Path.userHome / ".ivy2" / ".credentialsTest") else Credentials(Path.userHome / ".ivy2" / ".credentials")}
-
-
+credentials += Credentials(Path.userHome / ".ivy2" / ".credentials")
+// credentials += {if(isStaging) Credentials(Path.userHome / ".ivy2" / ".credentialsTest") else Credentials(Path.userHome / ".ivy2" / ".credentials")}
