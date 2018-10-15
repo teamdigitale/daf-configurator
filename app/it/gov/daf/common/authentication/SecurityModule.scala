@@ -83,7 +83,7 @@ class SecurityModule(environment: Environment, configuration: Configuration) ext
 
   override def configure(): Unit = {
 
-    Logger.logger.info(s"Daf-Configurator 1.0.3")
+    Logger.logger.info(s"Daf-Configurator 1.0.3-SNAPSHOT")
 
     Logger.debug("executing module..")
 

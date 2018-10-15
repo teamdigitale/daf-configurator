@@ -3,7 +3,7 @@
     <groupId>io.swagger</groupId>
     <artifactId>PlayServerTests</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.3</version>
+    <version>1.0.3-SNAPSHOT</version>
     <name>Play Daf-Configuration Server</name>
     <build>
         <plugins>
