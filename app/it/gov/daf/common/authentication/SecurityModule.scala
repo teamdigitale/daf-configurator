@@ -4,7 +4,6 @@ import com.google.inject.AbstractModule
 import java.security.InvalidParameterException
 import java.time.Duration
 
-import javax.inject.Inject
 import org.pac4j.core.client.Clients
 import org.pac4j.http.client.direct.{DirectBasicAuthClient, HeaderClient}
 import org.pac4j.http.credentials.authenticator.test.SimpleTestUsernamePasswordAuthenticator
