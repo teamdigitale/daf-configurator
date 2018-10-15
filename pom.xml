@@ -64,6 +64,19 @@
                             </configOptions>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>Scala</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <inputSpec>${project.basedir}/public/reference.yaml</inputSpec>
+                            <language>scala</language>
+                            <output>.</output>
+                            <invokerPackage>${project.basedir}/app</invokerPackage>
+                            <modelPackage>apiModelsScala</modelPackage>
+                        </configuration>
+                    </execution>
                 </executions>
             </plugin>
             <plugin>
