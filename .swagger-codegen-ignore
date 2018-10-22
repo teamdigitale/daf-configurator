@@ -33,16 +33,3 @@ project/build.properties
 project/plugins.sbt
 conf/application.conf
 app/swagger/ErrorHandler.java
-.gitignore
-build.gradle
-src/main/scala/io/swagger/client/ApiInvoker.scala
-src/main/scala/io/swagger/client/AsyncClient.scala
-src/main/scala/io/swagger/client/api/*
-git_push.sh
-gradle/wrapper/gradle-wrapper.jar
-gradle/wrapper/gradle-wrapper.properties
-gradlew
-settings.gradle
-gradle.properties
-gradlew.bat
-/src/*
