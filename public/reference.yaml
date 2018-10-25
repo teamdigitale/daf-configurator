@@ -73,6 +73,9 @@ paths:
       x-accepts: application/json
   "/vocabulary/{name}":
     get:
+      security:
+      - basic: []
+      - Bearer: []
       tags:
       - Vocabulary
       summary: Secured API to find vocabulary by name
@@ -172,4 +175,3 @@ definitions:
 externalDocs:
   description: Find out more about Swagger
   url: http://swagger.io
-
