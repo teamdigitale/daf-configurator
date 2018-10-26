@@ -1,6 +1,5 @@
 package it.gov.daf.common.authentication
 
-import java.util
 import java.util.Date
 
 import com.nimbusds.jwt.JWTClaimsSet
@@ -13,7 +12,7 @@ import org.pac4j.play.store.PlaySessionStore
 import play.api.Configuration
 import play.api.mvc.{RequestHeader, Result, Results}
 
-import scala.collection.convert.decorateAsScala._
+import scala.collection.JavaConverters._
 import scala.collection.mutable
 
 object Authentication extends Results {
