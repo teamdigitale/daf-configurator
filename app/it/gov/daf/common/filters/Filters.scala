@@ -16,12 +16,8 @@
 
 package it.gov.daf.common.filters
 
-import it.gov.daf.common.filters.authentication.SecurityFilter
-
 import javax.inject.Inject
 import play.api.http.DefaultHttpFilters
 import play.filters.cors.CORSFilter
-
-//class FiltersSecurity @Inject()(dafConfiguratorSecurityFilter: SecurityFilter) extends DefaultHttpFilters(dafConfiguratorSecurityFilter)
 
 class FiltersSecurityCORS @Inject()(dafConfiguratorSecurityFilter: SecurityFilter, corsFilter: CORSFilter) extends DefaultHttpFilters(dafConfiguratorSecurityFilter, corsFilter)

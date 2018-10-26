@@ -32,14 +32,14 @@ public class ErrorHandler extends DefaultHttpErrorHandler {
     @Override
     protected CompletionStage<Result> onDevServerError(RequestHeader request, UsefulException exception) {
         return CompletableFuture.completedFuture(
-            handleExceptions(exception, extractTypeException(exception.description))
+                handleExceptions(exception, extractTypeException(exception.description))
         );
     }
 
     @Override
     protected CompletionStage<Result> onProdServerError(RequestHeader request, UsefulException exception) {
         return CompletableFuture.completedFuture(
-            handleExceptions(exception, extractTypeException(exception.description))
+                handleExceptions(exception, extractTypeException(exception.description))
         );
     }
 

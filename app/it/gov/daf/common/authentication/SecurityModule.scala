@@ -9,7 +9,6 @@ import org.pac4j.http.client.direct.{DirectBasicAuthClient, HeaderClient}
 import org.pac4j.http.credentials.authenticator.test.SimpleTestUsernamePasswordAuthenticator
 import org.pac4j.jwt.credentials.authenticator.JwtAuthenticator
 import play.api.{Configuration, Environment, Logger}
-
 import org.ldaptive.auth.{Authenticator, BindAuthenticationHandler, SearchDnResolver}
 import org.ldaptive.pool._
 import org.ldaptive.ssl.SslConfig
@@ -23,24 +22,10 @@ import org.pac4j.play.store.{PlayCacheSessionStore, PlaySessionStore}
 
 import scala.sys.process._
 
-
-
 class SecurityModule(environment: Environment, configuration: Configuration) extends AbstractModule {
 
 
   private def getLdapAuthenticator = {
-    Logger.logger.info("Daf-Configurator 1.0.0-SNAPSHOT")
-
-
-    Logger.debug("executing module..")
-
-    Logger.debug("--env--")
-    Logger.debug("ls -l".!! )
-    Logger.debug("-------")
-    Logger.debug("ls -l conf".!! )
-    Logger.debug("-------")
-    Logger.debug("ls -l data".!! )
-    Logger.debug("-------")
 
     val connectionConfig = new ConnectionConfig
     connectionConfig.setConnectTimeout(Duration.ofMillis(configuration.getOptional[Long]("pac4j.ldap.connect_timeout").getOrElse(10000)))
@@ -98,6 +83,18 @@ class SecurityModule(environment: Environment, configuration: Configuration) ext
 
   override def configure(): Unit = {
 
+    Logger.logger.info(s"Daf-Configurator 1.0.3-SNAPSHOT")
+
+    Logger.debug("executing module..")
+
+    Logger.debug("--env--")
+    Logger.debug("ls -l".!! )
+    Logger.debug("-------")
+    Logger.debug("ls -l conf".!! )
+    Logger.debug("-------")
+    Logger.debug("ls -l data".!! )
+    Logger.debug("-------")
+
     bind(classOf[PlaySessionStore]).to(classOf[PlayCacheSessionStore])
 
     bind(classOf[SecurityComponents]).to(classOf[DefaultSecurityComponents])
@@ -105,7 +102,7 @@ class SecurityModule(environment: Environment, configuration: Configuration) ext
     val authenticatorConf = configuration.getOptional[String]("pac4j.authenticator").getOrElse("ldap")
 
     val authenticator = authenticatorConf match {
-      case "ldap" => getLdapAuthenticator
+//      case "ldap" => getLdapAuthenticator
       case "test" => new SimpleTestUsernamePasswordAuthenticator
       case _ => getLdapAuthenticator
     }

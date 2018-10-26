@@ -73,45 +73,32 @@ paths:
       x-accepts: application/json
   "/vocabulary/{name}":
     get:
+      security:
+      - basic: []
+      - Bearer: []
       tags:
       - Vocabulary
-      summary: Find Vocabulary by ID
-      description: Returns a single Vocabulary
-      operationId: getVocById
-      consumes:
-      - application/json
+      summary: Secured API to find vocabulary by name
+      description: Return a single Vocabulary
+      operationId: getVocByName
       produces:
       - application/json
       parameters:
       - name: name
         in: path
-        description: name of vocabulary to return
         required: true
         type: string
-#      - name: Authorization
-#        in: header
-#        required: true
-#        description: authorization token
-#        type: string
       responses:
-        '200':
+        200:
           description: successful operation
           schema:
-            "$ref": "#/definitions/Vocabulary"
-        '400':
-          description: Invalid ID supplied
-#          schema:
-#            $ref: "#/definitions/Error"
-        '404':
+            $ref: "#/definitions/Vocabulary"
+        401:
+          description: not authorized to get Vocabulary
+        404:
           description: Vocabulary not found
-#          schema:
-#            $ref: "#/definitions/Error"
-#        default:
-#          description: Unexpected error
-#          schema:
-#            $ref: '#/definitions/Error'
-      x-accepts: application/json
-      x-contentType: application/json
+        500:
+          description: Unexpected error
     post:
       security:
         - basic: []

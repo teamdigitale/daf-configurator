@@ -30,17 +30,14 @@ public class VocabularyApiControllerImp implements VocabularyApiControllerImpInt
     }
 
     @Override
-    public Vocabulary getVocById(RequestHeader requestHeader, String name) throws Exception {
-        System.out.println("sono dentro2");
-        System.out.println(requestHeader.headers().keys());
+    public Vocabulary getVocByName(RequestHeader requestHeader, String name) throws Exception {
         UserInfo userInfo = CredentialManager.readCredentialFromRequest(requestHeader);
         Logger.debug(userInfo.username() + " get voc " + name);
         if(CredentialManager.isOrgsAdmin(requestHeader, userInfo.groups()) || CredentialManager.isOrgsEditor(requestHeader, userInfo.groups())) {
-//        if(true) {
             BufferedReader br = null;
             FileReader fr = null;
             try {
-                fr = new FileReader(Environment.simple().getFile("/data/" + name + ".json"));
+                fr = new FileReader(Environment.simple().getFile(vocPath + name + ".json"));
                 br = new BufferedReader(fr);
                 String sCurrentLine;
                 StringBuffer fileVoc = new StringBuffer();
@@ -53,7 +50,7 @@ public class VocabularyApiControllerImp implements VocabularyApiControllerImpInt
             } catch (FileNotFoundException e) {
                 throw new NotFoundException(e.getMessage());
             }
-                finally {
+            finally {
                 try {
                     if (br != null)
                         br.close();
@@ -63,8 +60,7 @@ public class VocabularyApiControllerImp implements VocabularyApiControllerImpInt
                     ex.printStackTrace();
                 }
             }
-        }
-        else throw new UnauthorizedException("unauthorized");
+        } else throw new UnauthorizedException("unauthorized to get voc");
     }
 
     @Override

@@ -1,4 +1,4 @@
-import com.typesafe.sbt.packager.docker.{Cmd, ExecCmd}
+//import com.typesafe.sbt.packager.docker.{Cmd, ExecCmd}
 import Versions._
 
 
@@ -60,12 +60,13 @@ scalacOptions in Test ++= sopts
 
 resolvers ++= Seq(Resolver.mavenLocal, "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases", "Sonatype snapshots repository" at "https://oss.sonatype.org/content/repositories/snapshots/", "Shibboleth releases" at "https://build.shibboleth.net/nexus/content/repositories/releases/")
 
-routesGenerator := InjectedRoutesGenerator
+//routesGenerator := InjectedRoutesGenerator
 
 fork in run := true
 
 import com.typesafe.sbt.packager.MappingsHelper._
 mappings in Universal ++= directory(baseDirectory.value / "data")
+dockerBuildOptions ++= Seq("--network", "host")
 
 dockerBuildOptions ++= Seq("--network", "host")
 
